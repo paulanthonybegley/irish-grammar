@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 1: An Aimsir Láithreach Leanúnach — Irish Grammar</title>
+<style>* { margin:0; padding:0; box-sizing:border-box; }
+:root { --green:#1a6b3c; --green-dark:#0d4a28; --gold:#d4af37; --cream:#faf8f0; --text:#1a1a1a; --grey:#6b6b6b; }
+body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; background:var(--cream); color:var(--text); line-height:1.6; }
+.topbar { background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%); color:#fff; padding:.9rem 1.2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:.5rem; }
+.topbar a { color:#eafae8; text-decoration:none; font-weight:600; font-size:.9rem; }
+.topbar .title { font-weight:700; font-size:1.05rem; }
+header.hdr { background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%); color:#fff; padding:1.6rem 1.2rem; text-align:center; }
+header.hdr h1 { font-size:clamp(1.4rem,3vw,2.1rem); }
+header.hdr p { opacity:.9; }
+header.hdr .yt { display:inline-block; margin-top:.7rem; background:#fff; color:var(--green); padding:.35rem 1rem; border-radius:30px; text-decoration:none; font-weight:600; font-size:.82rem; }
+.container { max-width:900px; margin:0 auto; padding:1.4rem 1.2rem 3rem; }
+.tabs { display:flex; gap:.6rem; flex-wrap:wrap; margin-bottom:1.4rem; }
+.tabbtn { border:2px solid var(--green); background:#fff; color:var(--green); padding:.55rem 1rem; border-radius:8px; font-weight:600; cursor:pointer; font-size:.9rem; transition:all .18s; font-family:inherit; }
+.tabbtn.active { background:var(--green); color:#fff; }
+.panel { display:none; }
+.panel.active { display:block; }
+.panel h2 { color:var(--green); margin-bottom:.6rem; font-size:1.3rem; }
+.panel p.lede { color:var(--grey); margin-bottom:1rem; font-size:.95rem; }
+.speak, [data-say] { color:var(--green); text-decoration:underline dotted; cursor:pointer; }
+.progressbox { background:#fff; border-radius:10px; padding:.9rem 1.2rem; box-shadow:0 2px 6px rgba(26,107,60,.08); border:1px solid #e8f0e4; margin-bottom:1rem; display:flex; align-items:center; gap:1rem; flex-wrap:wrap; }
+.progressbox .bar { flex:1; height:10px; background:#e7ede4; border-radius:6px; overflow:hidden; min-width:120px; }
+.progressbox .bar .fill { height:100%; background:linear-gradient(90deg,var(--green),#3aa866); transition:width .3s; }
+.btn { display:inline-block; background:var(--green); color:#fff; padding:.55rem 1.1rem; border-radius:8px; border:none; font-weight:600; font-size:.9rem; cursor:pointer; transition:background .18s; font-family:inherit; }
+.btn:hover { background:var(--green-dark); }
+.btn.gold { background:var(--gold); color:#1a1a1a; }
+.btn.ghost { background:#fff; color:var(--green); border:2px solid var(--green); }
+.qcard { background:#fff; border-radius:12px; padding:1.3rem 1.5rem; box-shadow:0 2px 10px rgba(26,107,60,.08); border:1px solid #e8f0e4; margin-bottom:1rem; }
+.qcard .q { font-size:1.1rem; margin-bottom:.8rem; }
+.opts { display:grid; gap:.6rem; }
+.opt { border:2px solid #d4e4d0; background:#fff; padding:.7rem 1rem; border-radius:8px; cursor:pointer; font-size:.98rem; transition:all .15s; text-align:left; font-family:inherit; }
+.opt:hover { border-color:var(--green); }
+.opt.correct { background:#e9f7ec; border-color:#2e9e4f; }
+.opt.wrong { background:#fdecec; border-color:#c0392b; }
+.navbtns { display:flex; gap:.7rem; margin-top:1rem; flex-wrap:wrap; }
+.flipcard { perspective:1000px; cursor:pointer; }
+.flipcard .inner { position:relative; width:100%; min-height:230px; transition:transform .5s; transform-style:preserve-3d; }
+.flipcard.flipped .inner { transform:rotateY(180deg); }
+.face { position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden; border-radius:14px; padding:1.4rem; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; box-shadow:0 4px 14px rgba(26,107,60,.14); }
+.face.front { background:#fff; border:2px solid var(--green); }
+.face.front .prompt { color:var(--gold); font-weight:700; font-size:.82rem; text-transform:uppercase; letter-spacing:1px; margin-bottom:.5rem; }
+.face.front .verb { font-size:1.7rem; font-weight:800; color:var(--green); }
+.face.front .en { color:var(--grey); margin-top:.4rem; font-size:.95rem; }
+.face.front .hint { color:var(--grey); margin-top:.7rem; font-size:.88rem; }
+.face.back { background:var(--green); color:#fff; transform:rotateY(180deg); font-size:1rem; }
+.face.back .prep { font-size:1.15rem; font-weight:700; margin-bottom:.5rem; }
+.empty-note { color:var(--grey); font-size:.9rem; margin-top:.4rem; }
+.feedback { font-weight:700; margin-top:.6rem; }
+.feedback.ok { color:#2e9e4f; }
+.feedback.no { color:#c0392b; }
+.feedback.sol { color:var(--grey); font-size:.9rem; font-weight:500; margin-top:.3rem; }
+.qtype { font-size:.85rem; color:var(--grey); margin-bottom:.5rem; }
+.qtype-tag { display:inline-block; background:var(--green); color:#fff; border-radius:20px; padding:.12rem .75rem; font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.4px; vertical-align:middle; }
+.qcard.results { text-align:center; border-top:5px solid var(--gold); }
+.qcard.results h3 { color:var(--green); margin-bottom:.4rem; font-size:1.4rem; }
+.qcard.results .bigscore { font-size:1.15rem; margin:.6rem 0 1rem; }
+.qcard.results .navbtns { justify-content:center; }
+table.conj { width:100%; border-collapse:collapse; margin:.6rem 0; font-size:.92rem; }
+table.conj th, table.conj td { padding:.4rem .55rem; text-align:left; border-bottom:1px solid #e8f0e4; }
+table.conj th { background:#e8f0e4; color:var(--green); font-weight:600; }
+table.conj td.pron { color:var(--grey); font-weight:600; }
+table.conj .irish { color:var(--green); font-weight:600; cursor:pointer; border-bottom:1px dashed #1a6b3c44; }
+table.conj .irish:hover { background:#e8f0e4; border-radius:3px; }
+details.verb { background:#fff; border:1px solid #e8f0e4; border-radius:10px; padding:.5rem 1rem; margin:.6rem 0; box-shadow:0 1px 5px rgba(26,107,60,.06); }
+details.verb > summary { cursor:pointer; font-weight:600; color:var(--green); list-style:none; }
+details.verb > summary::-webkit-details-marker { display:none; }
+details.verb > summary::before { content:'▶'; font-size:.7rem; margin-right:.55rem; color:var(--gold); }
+details.verb[open] > summary::before { content:'▼'; }
+details.verb summary .m { color:var(--grey); font-weight:400; font-style:italic; }
+.patternbox { background:#f0f7e8; border-left:4px solid var(--green); border-radius:8px; padding:.8rem 1.1rem; margin:.7rem 0; font-size:1.05rem; }
+.patternbox b { color:var(--green); }
+.patternbox .en { color:var(--grey); font-size:.9rem; display:block; margin-top:.2rem; }
+.signal { display:flex; flex-wrap:wrap; gap:.4rem; margin:.4rem 0; }
+.chip { background:#e8f0e4; color:var(--green); border-radius:20px; padding:.25rem .8rem; font-size:.88rem; cursor:pointer; }
+.chip:hover { background:#d4e4d0; }
+.note { background:#fbf7e9; border:1px solid #e8d9a8; border-radius:10px; padding:.8rem 1.1rem; margin:.7rem 0; }
+.note h4 { color:#8a6d1e; margin-bottom:.25rem; font-size:1rem; }
+.uses li { margin:.3rem 0; }
+.section-h { color:var(--green); margin:1.3rem 0 .5rem; font-size:1.15rem; border-bottom:2px solid #e8f0e4; padding-bottom:.3rem; }
+@media (max-width:560px){ .flipcard .inner { min-height:200px; } .face.front .verb { font-size:1.35rem; } table.conj { font-size:.82rem; } table.conj th, table.conj td { padding:.3rem .35rem; } }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a href="../index.html">← Course overview</a>
+  <span class="title">🏃 Lesson 1: An Aimsir Láithreach Leanúnach</span>
+  <span>🔊 ga-IE</span>
+</div>
+<header class="hdr">
+  <h1>🏃 An Aimsir Láithreach Leanúnach</h1>
+  <p>The Present Continuous · 25 ag + verbal noun</p>
+  <a class="yt" href="https://www.youtube.com/watch?v=O6gXTZdea18" target="_blank" rel="noopener">▶ Watch the video</a>
+</header>
+<div class="container">
+  <div class="progressbox">
+    <span>Progress</span>
+    <div class="bar"><div class="fill" id="progFill" style="width:0%"></div></div>
+    <span id="progPct">0%</span>
+    <button class="btn ghost" onclick="resetProg()">Reset</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tabbtn active" data-tab="study">📚 Study</button>
+    <button class="tabbtn" data-tab="drill">🃏 Flashcards</button>
+    <button class="tabbtn" data-tab="fill">✍️ Fill in</button>
+    <button class="tabbtn" data-tab="quiz">🎯 Quiz</button>
+  </div>
+
+  <section class="panel active" id="panel-study">
+    <h2>Study</h2>
+    <p class="lede">Describe what is happening right now with Tá … ag … . Click any green Irish word to hear it.</p>
+    <div id="studyList"></div>
+  </section>
+
+  <section class="panel" id="panel-drill">
+    <h2>Flashcards</h2>
+    <p class="lede">Think of the answer, then flip the card to check.</p>
+    <div class="progressbox"><span>Card</span><span id="drillPos">1 / 1</span>
+      <div class="bar"><div class="fill" id="drillFill" style="width:0%"></div></div></div>
+    <div class="flipcard" id="flipcard" onclick="flip()">
+      <div class="inner">
+        <div class="face front">
+          <div class="prompt" id="drillPrompt"></div>
+          <div class="verb" id="drillVerb"></div>
+          <div class="en" id="drillEn"></div>
+          <div class="hint">Click for the answer</div>
+        </div>
+        <div class="face back" id="drillBack"></div>
+      </div>
+    </div>
+    <div class="navbtns">
+      <button class="btn ghost" onclick="drillPrev()">← Back</button>
+      <button class="btn" onclick="drillNext()">Next →</button>
+    </div>
+    <p class="empty-note">Cards appear in a random order.</p>
+  </section>
+
+  <section class="panel" id="panel-fill">
+    <h2>Fill in the blank</h2>
+    <p class="lede">Choose the correct word to complete each sentence.</p>
+    <div class="progressbox"><span>Question</span><span id="fillPos">1 / 10</span>
+      <div class="bar"><div class="fill" id="fillFill" style="width:0%"></div></div>
+      <span>Score</span><span id="fillScore">0 / 0</span></div>
+    <div id="fillQ"></div>
+    <div class="navbtns"><button class="btn ghost" onclick="fillReset()">Reshuffle</button></div>
+    <p class="empty-note">10 random sentences each round.</p>
+  </section>
+
+  <section class="panel" id="panel-quiz">
+    <h2>Quiz</h2>
+    <p class="lede">Mixed questions on forms, negatives, questions and meaning.</p>
+    <div class="progressbox"><span>Question</span><span id="quizPos">1 / 10</span>
+      <div class="bar"><div class="fill" id="quizFill" style="width:0%"></div></div>
+      <span>Score</span><span id="quizScore">0 / 0</span></div>
+    <div id="quizQ"></div>
+    <div class="navbtns"><button class="btn ghost" onclick="quizReset()">Reshuffle</button></div>
+    <p class="empty-note">10 questions drawn from the full pool.</p>
+  </section>
+</div>
+<footer style="text-align:center;padding:1.6rem;color:var(--grey);font-size:.88rem">
+  <p>Lesson 1 of 6 · Based on “Irish Grammar” by Stories in Irish ·
+  <a href="../index.html" style="color:var(--green)">Course overview</a></p>
+</footer>
+<script>
+const LESSON = {"id": 1, "kind": "continuous", "study": "\n    <div class=\"patternbox\"><b>Tá + [duine] + ag + [ainm briathartha]</b>\n      <span class=\"en\">Tá + [person] + ag + [verbal noun] — Describe what is happening right now with Tá … ag … .</span></div>\n    <h3 class=\"section-h\">When we use it</h3>\n    <ul class=\"uses\"><li><span class=\"irish\" data-say=\"Tá mé ag léamh.\">Tá mé ag léamh.</span> — <em>I am reading.</em></li><li><span class=\"irish\" data-say=\"Tá sí ag cócaireacht an dinnéir.\">Tá sí ag cócaireacht an dinnéir.</span> — <em>She is cooking the dinner.</em></li><li><span class=\"irish\" data-say=\"Tá siad ag féachaint ar an teilifís.\">Tá siad ag féachaint ar an teilifís.</span> — <em>They are watching television.</em></li></ul>\n    <h3 class=\"section-h\">Signal words</h3>\n    <div class=\"signal\"><span class=\"chip\" data-say=\"anois\">anois · now</span><span class=\"chip\" data-say=\"faoi láthair\">faoi láthair · at present</span><span class=\"chip\" data-say=\"i láthair na huaire\">i láthair na huaire · at the moment</span><span class=\"chip\" data-say=\"ag an nóiméad seo\">ag an nóiméad seo · at this minute</span></div>\n    <h3 class=\"section-h\">The verb bí — to be — present</h3>\n    <table class=\"conj\">\n      <tr><th>Pronoun</th><th>Positive</th><th>Negative</th><th>Question</th><th>Neg. question</th></tr>\n      <tr><td class=\"pron\">mé</td><td><span class=\"irish\" data-say=\"Tá mé / Táim\">Tá mé / Táim</span></td><td><span class=\"irish\" data-say=\"Níl mé / Nílim\">Níl mé / Nílim</span></td><td><span class=\"irish\" data-say=\"An bhfuil mé?\">An bhfuil mé?</span></td><td><span class=\"irish\" data-say=\"Nach bhfuil mé?\">Nach bhfuil mé?</span></td></tr><tr><td class=\"pron\">tú</td><td><span class=\"irish\" data-say=\"Tá tú\">Tá tú</span></td><td><span class=\"irish\" data-say=\"Níl tú\">Níl tú</span></td><td><span class=\"irish\" data-say=\"An bhfuil tú?\">An bhfuil tú?</span></td><td><span class=\"irish\" data-say=\"Nach bhfuil tú?\">Nach bhfuil tú?</span></td></tr><tr><td class=\"pron\">sé</td><td><span class=\"irish\" data-say=\"Tá sé\">Tá sé</span></td><td><span class=\"irish\" data-say=\"Níl sé\">Níl sé</span></td><td><span class=\"irish\" data-say=\"An bhfuil sé?\">An bhfuil sé?</span></td><td><span class=\"irish\" data-say=\"Nach bhfuil sé?\">Nach bhfuil sé?</span></td></tr><tr><td class=\"pron\">sí</td><td><span class=\"irish\" data-say=\"Tá sí\">Tá sí</span></td><td><span class=\"irish\" data-say=\"Níl sí\">Níl sí</span></td><td><span class=\"irish\" data-say=\"An bhfuil sí?\">An bhfuil sí?</span></td><td><span class=\"irish\" data-say=\"Nach bhfuil sí?\">Nach bhfuil sí?</span></td></tr><tr><td class=\"pron\">muid</td><td><span class=\"irish\" data-say=\"Tá muid / Táimid\">Tá muid / Táimid</span></td><td><span class=\"irish\" data-say=\"Níl muid / Nílimid\">Níl muid / Nílimid</span></td><td><span class=\"irish\" data-say=\"An bhfuil muid?\">An bhfuil muid?</span></td><td><span class=\"irish\" data-say=\"Nach bhfuil muid?\">Nach bhfuil muid?</span></td></tr><tr><td class=\"pron\">sibh</td><td><span class=\"irish\" data-say=\"Tá sibh\">Tá sibh</span></td><td><span class=\"irish\" data-say=\"Níl sibh\">Níl sibh</span></td><td><span class=\"irish\" data-say=\"An bhfuil sibh?\">An bhfuil sibh?</span></td><td><span class=\"irish\" data-say=\"Nach bhfuil sibh?\">Nach bhfuil sibh?</span></td></tr><tr><td class=\"pron\">siad</td><td><span class=\"irish\" data-say=\"Tá siad\">Tá siad</span></td><td><span class=\"irish\" data-say=\"Níl siad\">Níl siad</span></td><td><span class=\"irish\" data-say=\"An bhfuil siad?\">An bhfuil siad?</span></td><td><span class=\"irish\" data-say=\"Nach bhfuil siad?\">Nach bhfuil siad?</span></td></tr><tr><td class=\"pron\">saor</td><td><span class=\"irish\" data-say=\"Táthar\">Táthar</span></td><td><span class=\"irish\" data-say=\"Ní tháthar\">Ní tháthar</span></td><td><span class=\"irish\" data-say=\"An bhfuiltear?\">An bhfuiltear?</span></td><td><span class=\"irish\" data-say=\"Nach bhfuiltear?\">Nach bhfuiltear?</span></td></tr>\n    </table>\n    <h3 class=\"section-h\">The verbal noun (an t-ainm briathartha)</h3>\n    <p class=\"empty-note\">After <b>ag</b> we use the verbal noun. It never changes for person.</p>\n    <table class=\"conj\">\n      <tr><th>Verbal noun</th><th>Meaning</th><th>Verb</th><th>Example</th></tr>\n      <tr><td><span class=\"irish\" data-say=\"léamh\">léamh</span></td><td>reading</td><td>to read</td><td><span class=\"irish\" data-say=\"Tá mé ag léamh.\">Tá mé ag léamh.</span></td></tr><tr><td><span class=\"irish\" data-say=\"scríobh\">scríobh</span></td><td>writing</td><td>to write</td><td><span class=\"irish\" data-say=\"Tá mé ag scríobh.\">Tá mé ag scríobh.</span></td></tr><tr><td><span class=\"irish\" data-say=\"ól\">ól</span></td><td>drinking</td><td>to drink</td><td><span class=\"irish\" data-say=\"Tá mé ag ól.\">Tá mé ag ól.</span></td></tr><tr><td><span class=\"irish\" data-say=\"ithe\">ithe</span></td><td>eating</td><td>to eat</td><td><span class=\"irish\" data-say=\"Tá mé ag ithe.\">Tá mé ag ithe.</span></td></tr><tr><td><span class=\"irish\" data-say=\"rith\">rith</span></td><td>running</td><td>to run</td><td><span class=\"irish\" data-say=\"Tá mé ag rith.\">Tá mé ag rith.</span></td></tr><tr><td><span class=\"irish\" data-say=\"caint\">caint</span></td><td>talking</td><td>to talk</td><td><span class=\"irish\" data-say=\"Tá mé ag caint.\">Tá mé ag caint.</span></td></tr><tr><td><span class=\"irish\" data-say=\"siúl\">siúl</span></td><td>walking</td><td>to walk</td><td><span class=\"irish\" data-say=\"Tá mé ag siúl.\">Tá mé ag siúl.</span></td></tr><tr><td><span class=\"irish\" data-say=\"féachaint\">féachaint</span></td><td>watching / looking</td><td>to look</td><td><span class=\"irish\" data-say=\"Tá mé ag féachaint.\">Tá mé ag féachaint.</span></td></tr><tr><td><span class=\"irish\" data-say=\"éisteacht\">éisteacht</span></td><td>listening</td><td>to listen</td><td><span class=\"irish\" data-say=\"Tá mé ag éisteacht.\">Tá mé ag éisteacht.</span></td></tr><tr><td><span class=\"irish\" data-say=\"ceannach\">ceannach</span></td><td>buying</td><td>to buy</td><td><span class=\"irish\" data-say=\"Tá mé ag ceannach.\">Tá mé ag ceannach.</span></td></tr><tr><td><span class=\"irish\" data-say=\"déanamh\">déanamh</span></td><td>doing / making</td><td>to do / make</td><td><span class=\"irish\" data-say=\"Tá mé ag déanamh.\">Tá mé ag déanamh.</span></td></tr><tr><td><span class=\"irish\" data-say=\"dul\">dul</span></td><td>going</td><td>to go</td><td><span class=\"irish\" data-say=\"Tá mé ag dul.\">Tá mé ag dul.</span></td></tr><tr><td><span class=\"irish\" data-say=\"teacht\">teacht</span></td><td>coming</td><td>to come</td><td><span class=\"irish\" data-say=\"Tá mé ag teacht.\">Tá mé ag teacht.</span></td></tr><tr><td><span class=\"irish\" data-say=\"fanacht\">fanacht</span></td><td>waiting / staying</td><td>to wait / stay</td><td><span class=\"irish\" data-say=\"Tá mé ag fanacht.\">Tá mé ag fanacht.</span></td></tr><tr><td><span class=\"irish\" data-say=\"obair\">obair</span></td><td>working</td><td>to work</td><td><span class=\"irish\" data-say=\"Tá mé ag obair.\">Tá mé ag obair.</span></td></tr><tr><td><span class=\"irish\" data-say=\"codladh\">codladh</span></td><td>sleeping</td><td>to sleep</td><td><span class=\"irish\" data-say=\"Tá mé ag codladh.\">Tá mé ag codladh.</span></td></tr><tr><td><span class=\"irish\" data-say=\"glanadh\">glanadh</span></td><td>cleaning</td><td>to clean</td><td><span class=\"irish\" data-say=\"Tá mé ag glanadh.\">Tá mé ag glanadh.</span></td></tr><tr><td><span class=\"irish\" data-say=\"ní\">ní</span></td><td>washing</td><td>to wash</td><td><span class=\"irish\" data-say=\"Tá mé ag ní.\">Tá mé ag ní.</span></td></tr><tr><td><span class=\"irish\" data-say=\"cócaireacht\">cócaireacht</span></td><td>cooking</td><td>to cook</td><td><span class=\"irish\" data-say=\"Tá mé ag cócaireacht.\">Tá mé ag cócaireacht.</span></td></tr><tr><td><span class=\"irish\" data-say=\"damhsa\">damhsa</span></td><td>dancing</td><td>to dance</td><td><span class=\"irish\" data-say=\"Tá mé ag damhsa.\">Tá mé ag damhsa.</span></td></tr><tr><td><span class=\"irish\" data-say=\"canadh\">canadh</span></td><td>singing</td><td>to sing</td><td><span class=\"irish\" data-say=\"Tá mé ag canadh.\">Tá mé ag canadh.</span></td></tr><tr><td><span class=\"irish\" data-say=\"foghlaim\">foghlaim</span></td><td>learning</td><td>to learn</td><td><span class=\"irish\" data-say=\"Tá mé ag foghlaim.\">Tá mé ag foghlaim.</span></td></tr><tr><td><span class=\"irish\" data-say=\"imirt\">imirt</span></td><td>playing</td><td>to play</td><td><span class=\"irish\" data-say=\"Tá mé ag imirt.\">Tá mé ag imirt.</span></td></tr><tr><td><span class=\"irish\" data-say=\"snámh\">snámh</span></td><td>swimming</td><td>to swim</td><td><span class=\"irish\" data-say=\"Tá mé ag snámh.\">Tá mé ag snámh.</span></td></tr><tr><td><span class=\"irish\" data-say=\"smaoineamh\">smaoineamh</span></td><td>thinking</td><td>to think</td><td><span class=\"irish\" data-say=\"Tá mé ag smaoineamh.\">Tá mé ag smaoineamh.</span></td></tr>\n    </table>\n    <h3 class=\"section-h\">Notes</h3>\n    <div class=\"note\"><h4>Verb–noun order</h4>The person comes straight after the form of <b>bí</b>, then <b>ag</b>, then the verbal noun. The verbal noun never changes for person: <i>Tá mé ag rith</i>, <i>Tá siad ag rith</i>.</div><div class=\"note\"><h4>ag before a vowel</h4>In careful writing <b>ag</b> is kept before a vowel (<i>ag ól</i>, <i>ag ithe</i>, <i>ag éisteacht</i>), though you will hear it shortened to <i>a</i> in speech.</div><div class=\"note\"><h4>Negative &amp; questions</h4>Use the <b>bí</b> forms <i>Níl</i>, <i>An bhfuil?</i> and <i>Nach bhfuil?</i> — the <i>ag</i> + verbal noun part stays the same: <i>Níl mé ag léamh</i>.</div>\n    ", "drill": [{"front": "reading", "frontSub": "to read", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag léamh</div><span data-say=\"Tá mé ag léamh.\">Tá mé ag léamh.</span>", "say": "Tá mé ag léamh."}, {"front": "writing", "frontSub": "to write", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag scríobh</div><span data-say=\"Tá mé ag scríobh.\">Tá mé ag scríobh.</span>", "say": "Tá mé ag scríobh."}, {"front": "drinking", "frontSub": "to drink", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag ól</div><span data-say=\"Tá mé ag ól.\">Tá mé ag ól.</span>", "say": "Tá mé ag ól."}, {"front": "eating", "frontSub": "to eat", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag ithe</div><span data-say=\"Tá mé ag ithe.\">Tá mé ag ithe.</span>", "say": "Tá mé ag ithe."}, {"front": "running", "frontSub": "to run", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag rith</div><span data-say=\"Tá mé ag rith.\">Tá mé ag rith.</span>", "say": "Tá mé ag rith."}, {"front": "talking", "frontSub": "to talk", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag caint</div><span data-say=\"Tá mé ag caint.\">Tá mé ag caint.</span>", "say": "Tá mé ag caint."}, {"front": "walking", "frontSub": "to walk", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag siúl</div><span data-say=\"Tá mé ag siúl.\">Tá mé ag siúl.</span>", "say": "Tá mé ag siúl."}, {"front": "watching / looking", "frontSub": "to look", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag féachaint</div><span data-say=\"Tá mé ag féachaint.\">Tá mé ag féachaint.</span>", "say": "Tá mé ag féachaint."}, {"front": "listening", "frontSub": "to listen", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag éisteacht</div><span data-say=\"Tá mé ag éisteacht.\">Tá mé ag éisteacht.</span>", "say": "Tá mé ag éisteacht."}, {"front": "buying", "frontSub": "to buy", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag ceannach</div><span data-say=\"Tá mé ag ceannach.\">Tá mé ag ceannach.</span>", "say": "Tá mé ag ceannach."}, {"front": "doing / making", "frontSub": "to do / make", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag déanamh</div><span data-say=\"Tá mé ag déanamh.\">Tá mé ag déanamh.</span>", "say": "Tá mé ag déanamh."}, {"front": "going", "frontSub": "to go", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag dul</div><span data-say=\"Tá mé ag dul.\">Tá mé ag dul.</span>", "say": "Tá mé ag dul."}, {"front": "coming", "frontSub": "to come", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag teacht</div><span data-say=\"Tá mé ag teacht.\">Tá mé ag teacht.</span>", "say": "Tá mé ag teacht."}, {"front": "waiting / staying", "frontSub": "to wait / stay", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag fanacht</div><span data-say=\"Tá mé ag fanacht.\">Tá mé ag fanacht.</span>", "say": "Tá mé ag fanacht."}, {"front": "working", "frontSub": "to work", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag obair</div><span data-say=\"Tá mé ag obair.\">Tá mé ag obair.</span>", "say": "Tá mé ag obair."}, {"front": "sleeping", "frontSub": "to sleep", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag codladh</div><span data-say=\"Tá mé ag codladh.\">Tá mé ag codladh.</span>", "say": "Tá mé ag codladh."}, {"front": "cleaning", "frontSub": "to clean", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag glanadh</div><span data-say=\"Tá mé ag glanadh.\">Tá mé ag glanadh.</span>", "say": "Tá mé ag glanadh."}, {"front": "washing", "frontSub": "to wash", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag ní</div><span data-say=\"Tá mé ag ní.\">Tá mé ag ní.</span>", "say": "Tá mé ag ní."}, {"front": "cooking", "frontSub": "to cook", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag cócaireacht</div><span data-say=\"Tá mé ag cócaireacht.\">Tá mé ag cócaireacht.</span>", "say": "Tá mé ag cócaireacht."}, {"front": "dancing", "frontSub": "to dance", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag damhsa</div><span data-say=\"Tá mé ag damhsa.\">Tá mé ag damhsa.</span>", "say": "Tá mé ag damhsa."}, {"front": "singing", "frontSub": "to sing", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag canadh</div><span data-say=\"Tá mé ag canadh.\">Tá mé ag canadh.</span>", "say": "Tá mé ag canadh."}, {"front": "learning", "frontSub": "to learn", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag foghlaim</div><span data-say=\"Tá mé ag foghlaim.\">Tá mé ag foghlaim.</span>", "say": "Tá mé ag foghlaim."}, {"front": "playing", "frontSub": "to play", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag imirt</div><span data-say=\"Tá mé ag imirt.\">Tá mé ag imirt.</span>", "say": "Tá mé ag imirt."}, {"front": "swimming", "frontSub": "to swim", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag snámh</div><span data-say=\"Tá mé ag snámh.\">Tá mé ag snámh.</span>", "say": "Tá mé ag snámh."}, {"front": "thinking", "frontSub": "to think", "prompt": "Give the verbal noun with ag", "back": "<div class=\"prep\">ag smaoineamh</div><span data-say=\"Tá mé ag smaoineamh.\">Tá mé ag smaoineamh.</span>", "say": "Tá mé ag smaoineamh."}], "fill": [{"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "léamh", "english": "I am reading.", "say": "Tá mé ag léamh.", "options": ["ól", "scríobh", "ithe", "léamh"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "scríobh", "english": "I am writing.", "say": "Tá mé ag scríobh.", "options": ["léamh", "ithe", "ól", "scríobh"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "ól", "english": "I am drinking.", "say": "Tá mé ag ól.", "options": ["léamh", "scríobh", "ithe", "ól"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "ithe", "english": "I am eating.", "say": "Tá mé ag ithe.", "options": ["scríobh", "léamh", "ithe", "ól"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "rith", "english": "I am running.", "say": "Tá mé ag rith.", "options": ["rith", "scríobh", "léamh", "ól"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "caint", "english": "I am talking.", "say": "Tá mé ag caint.", "options": ["scríobh", "léamh", "ól", "caint"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "siúl", "english": "I am walking.", "say": "Tá mé ag siúl.", "options": ["ól", "léamh", "siúl", "scríobh"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "féachaint", "english": "I am watching / looking.", "say": "Tá mé ag féachaint.", "options": ["féachaint", "léamh", "ól", "scríobh"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "éisteacht", "english": "I am listening.", "say": "Tá mé ag éisteacht.", "options": ["léamh", "ól", "scríobh", "éisteacht"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "ceannach", "english": "I am buying.", "say": "Tá mé ag ceannach.", "options": ["ól", "scríobh", "léamh", "ceannach"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "déanamh", "english": "I am doing / making.", "say": "Tá mé ag déanamh.", "options": ["déanamh", "scríobh", "ól", "léamh"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "dul", "english": "I am going.", "say": "Tá mé ag dul.", "options": ["léamh", "ól", "scríobh", "dul"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "teacht", "english": "I am coming.", "say": "Tá mé ag teacht.", "options": ["scríobh", "teacht", "léamh", "ól"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "fanacht", "english": "I am waiting / staying.", "say": "Tá mé ag fanacht.", "options": ["ól", "scríobh", "léamh", "fanacht"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "obair", "english": "I am working.", "say": "Tá mé ag obair.", "options": ["ól", "léamh", "obair", "scríobh"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "codladh", "english": "I am sleeping.", "say": "Tá mé ag codladh.", "options": ["scríobh", "codladh", "ól", "léamh"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "glanadh", "english": "I am cleaning.", "say": "Tá mé ag glanadh.", "options": ["glanadh", "léamh", "scríobh", "ól"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "ní", "english": "I am washing.", "say": "Tá mé ag ní.", "options": ["léamh", "scríobh", "ní", "ól"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "cócaireacht", "english": "I am cooking.", "say": "Tá mé ag cócaireacht.", "options": ["léamh", "cócaireacht", "scríobh", "ól"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "damhsa", "english": "I am dancing.", "say": "Tá mé ag damhsa.", "options": ["léamh", "damhsa", "ól", "scríobh"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "canadh", "english": "I am singing.", "say": "Tá mé ag canadh.", "options": ["ól", "léamh", "canadh", "scríobh"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "foghlaim", "english": "I am learning.", "say": "Tá mé ag foghlaim.", "options": ["ól", "léamh", "scríobh", "foghlaim"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "imirt", "english": "I am playing.", "say": "Tá mé ag imirt.", "options": ["léamh", "imirt", "ól", "scríobh"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "snámh", "english": "I am swimming.", "say": "Tá mé ag snámh.", "options": ["ól", "léamh", "scríobh", "snámh"]}, {"qtype": "Which verbal noun completes the sentence?", "sentence": "Tá mé ag ______.", "answer": "smaoineamh", "english": "I am thinking.", "say": "Tá mé ag smaoineamh.", "options": ["ól", "smaoineamh", "léamh", "scríobh"]}], "quiz": [{"badge": "Verbal noun", "q": "Which verbal noun means '<b>reading</b>'?", "options": ["ithe", "ól", "léamh", "scríobh"], "correct": "léamh"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>writing</b>'?", "options": ["léamh", "ól", "scríobh", "ithe"], "correct": "scríobh"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>drinking</b>'?", "options": ["léamh", "ithe", "scríobh", "ól"], "correct": "ól"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>eating</b>'?", "options": ["léamh", "ól", "ithe", "scríobh"], "correct": "ithe"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>running</b>'?", "options": ["scríobh", "ól", "rith", "léamh"], "correct": "rith"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>talking</b>'?", "options": ["ól", "scríobh", "léamh", "caint"], "correct": "caint"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>walking</b>'?", "options": ["scríobh", "ól", "léamh", "siúl"], "correct": "siúl"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>watching / looking</b>'?", "options": ["ól", "féachaint", "scríobh", "léamh"], "correct": "féachaint"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>listening</b>'?", "options": ["léamh", "ól", "éisteacht", "scríobh"], "correct": "éisteacht"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>buying</b>'?", "options": ["ceannach", "léamh", "scríobh", "ól"], "correct": "ceannach"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>doing / making</b>'?", "options": ["déanamh", "ól", "scríobh", "léamh"], "correct": "déanamh"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>going</b>'?", "options": ["scríobh", "ól", "dul", "léamh"], "correct": "dul"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>coming</b>'?", "options": ["léamh", "ól", "teacht", "scríobh"], "correct": "teacht"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>waiting / staying</b>'?", "options": ["léamh", "ól", "fanacht", "scríobh"], "correct": "fanacht"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>working</b>'?", "options": ["obair", "léamh", "scríobh", "ól"], "correct": "obair"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>sleeping</b>'?", "options": ["codladh", "ól", "scríobh", "léamh"], "correct": "codladh"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>cleaning</b>'?", "options": ["léamh", "ól", "glanadh", "scríobh"], "correct": "glanadh"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>washing</b>'?", "options": ["léamh", "scríobh", "ól", "ní"], "correct": "ní"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>cooking</b>'?", "options": ["cócaireacht", "scríobh", "léamh", "ól"], "correct": "cócaireacht"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>dancing</b>'?", "options": ["ól", "léamh", "scríobh", "damhsa"], "correct": "damhsa"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>singing</b>'?", "options": ["scríobh", "léamh", "canadh", "ól"], "correct": "canadh"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>learning</b>'?", "options": ["ól", "foghlaim", "scríobh", "léamh"], "correct": "foghlaim"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>playing</b>'?", "options": ["scríobh", "imirt", "ól", "léamh"], "correct": "imirt"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>swimming</b>'?", "options": ["léamh", "scríobh", "snámh", "ól"], "correct": "snámh"}, {"badge": "Verbal noun", "q": "Which verbal noun means '<b>thinking</b>'?", "options": ["léamh", "scríobh", "ól", "smaoineamh"], "correct": "smaoineamh"}, {"badge": "bí — positive", "q": "Which is the <b>positive</b> form of <b>bí</b> for '<b>mé</b>'?", "options": ["Tá sí", "Tá tú", "Tá sé", "Tá mé / Táim"], "correct": "Tá mé / Táim"}, {"badge": "bí — negative", "q": "Which is the <b>negative</b> form of <b>bí</b> for '<b>mé</b>'?", "options": ["Níl tú", "Níl sí", "Níl sé", "Níl mé / Nílim"], "correct": "Níl mé / Nílim"}, {"badge": "bí — positive", "q": "Which is the <b>positive</b> form of <b>bí</b> for '<b>tú</b>'?", "options": ["Tá tú", "Tá sí", "Tá sé", "Tá mé / Táim"], "correct": "Tá tú"}, {"badge": "bí — negative", "q": "Which is the <b>negative</b> form of <b>bí</b> for '<b>tú</b>'?", "options": ["Níl tú", "Níl sé", "Níl sí", "Níl mé / Nílim"], "correct": "Níl tú"}, {"badge": "bí — positive", "q": "Which is the <b>positive</b> form of <b>bí</b> for '<b>sé</b>'?", "options": ["Tá sí", "Tá sé", "Tá tú", "Tá mé / Táim"], "correct": "Tá sé"}, {"badge": "bí — negative", "q": "Which is the <b>negative</b> form of <b>bí</b> for '<b>sé</b>'?", "options": ["Níl sé", "Níl sí", "Níl mé / Nílim", "Níl tú"], "correct": "Níl sé"}, {"badge": "bí — positive", "q": "Which is the <b>positive</b> form of <b>bí</b> for '<b>sí</b>'?", "options": ["Tá sí", "Tá mé / Táim", "Tá tú", "Tá sé"], "correct": "Tá sí"}, {"badge": "bí — negative", "q": "Which is the <b>negative</b> form of <b>bí</b> for '<b>sí</b>'?", "options": ["Níl mé / Nílim", "Níl tú", "Níl sé", "Níl sí"], "correct": "Níl sí"}, {"badge": "bí — positive", "q": "Which is the <b>positive</b> form of <b>bí</b> for '<b>muid</b>'?", "options": ["Tá tú", "Tá sé", "Tá mé / Táim", "Tá muid / Táimid"], "correct": "Tá muid / Táimid"}, {"badge": "bí — negative", "q": "Which is the <b>negative</b> form of <b>bí</b> for '<b>muid</b>'?", "options": ["Níl sé", "Níl muid / Nílimid", "Níl tú", "Níl mé / Nílim"], "correct": "Níl muid / Nílimid"}, {"badge": "bí — positive", "q": "Which is the <b>positive</b> form of <b>bí</b> for '<b>sibh</b>'?", "options": ["Tá mé / Táim", "Tá tú", "Tá sé", "Tá sibh"], "correct": "Tá sibh"}, {"badge": "bí — negative", "q": "Which is the <b>negative</b> form of <b>bí</b> for '<b>sibh</b>'?", "options": ["Níl sé", "Níl tú", "Níl sibh", "Níl mé / Nílim"], "correct": "Níl sibh"}, {"badge": "bí — positive", "q": "Which is the <b>positive</b> form of <b>bí</b> for '<b>siad</b>'?", "options": ["Tá mé / Táim", "Tá sé", "Tá siad", "Tá tú"], "correct": "Tá siad"}, {"badge": "bí — negative", "q": "Which is the <b>negative</b> form of <b>bí</b> for '<b>siad</b>'?", "options": ["Níl siad", "Níl mé / Nílim", "Níl sé", "Níl tú"], "correct": "Níl siad"}, {"badge": "bí — positive", "q": "Which is the <b>positive</b> form of <b>bí</b> for '<b>saor</b>'?", "options": ["Tá sé", "Táthar", "Tá tú", "Tá mé / Táim"], "correct": "Táthar"}, {"badge": "bí — negative", "q": "Which is the <b>negative</b> form of <b>bí</b> for '<b>saor</b>'?", "options": ["Níl tú", "Níl mé / Nílim", "Ní tháthar", "Níl sé"], "correct": "Ní tháthar"}, {"badge": "Build the sentence", "q": "How do you say '<b>I am waiting / staying</b>'?", "options": ["Tá mé ag léamh", "Tá mé ag fanacht", "Tá mé ag scríobh", "Tá mé ag ól"], "correct": "Tá mé ag fanacht", "say": "Tá mé ag fanacht."}, {"badge": "Make it negative", "q": "Make it negative: '<b>Tá mé ag fanacht</b>'", "options": ["Nach bhfuil mé? ag fanacht", "An bhfuil mé? ag fanacht", "Tá mé ag léamh", "Níl mé ag fanacht"], "correct": "Níl mé ag fanacht"}, {"badge": "Build the sentence", "q": "How do you say '<b>I am walking</b>'?", "options": ["Tá mé ag léamh", "Tá mé ag ól", "Tá mé ag siúl", "Tá mé ag scríobh"], "correct": "Tá mé ag siúl", "say": "Tá mé ag siúl."}, {"badge": "Make it negative", "q": "Make it negative: '<b>Tá mé ag siúl</b>'", "options": ["Nach bhfuil mé? ag siúl", "Tá mé ag léamh", "Níl mé ag siúl", "An bhfuil mé? ag siúl"], "correct": "Níl mé ag siúl"}, {"badge": "Build the sentence", "q": "How do you say '<b>I am eating</b>'?", "options": ["Tá mé ag scríobh", "Tá mé ag ithe", "Tá mé ag ól", "Tá mé ag léamh"], "correct": "Tá mé ag ithe", "say": "Tá mé ag ithe."}, {"badge": "Make it negative", "q": "Make it negative: '<b>Tá mé ag ithe</b>'", "options": ["Tá mé ag léamh", "Níl mé ag ithe", "An bhfuil mé? ag ithe", "Nach bhfuil mé? ag ithe"], "correct": "Níl mé ag ithe"}, {"badge": "Build the sentence", "q": "How do you say '<b>I am playing</b>'?", "options": ["Tá mé ag scríobh", "Tá mé ag ól", "Tá mé ag léamh", "Tá mé ag imirt"], "correct": "Tá mé ag imirt", "say": "Tá mé ag imirt."}, {"badge": "Make it negative", "q": "Make it negative: '<b>Tá mé ag imirt</b>'", "options": ["An bhfuil mé? ag imirt", "Tá mé ag léamh", "Nach bhfuil mé? ag imirt", "Níl mé ag imirt"], "correct": "Níl mé ag imirt"}, {"badge": "Build the sentence", "q": "How do you say '<b>I am thinking</b>'?", "options": ["Tá mé ag léamh", "Tá mé ag scríobh", "Tá mé ag ól", "Tá mé ag smaoineamh"], "correct": "Tá mé ag smaoineamh", "say": "Tá mé ag smaoineamh."}, {"badge": "Make it negative", "q": "Make it negative: '<b>Tá mé ag smaoineamh</b>'", "options": ["Níl mé ag smaoineamh", "Nach bhfuil mé? ag smaoineamh", "An bhfuil mé? ag smaoineamh", "Tá mé ag léamh"], "correct": "Níl mé ag smaoineamh"}, {"badge": "Build the sentence", "q": "How do you say '<b>I am going</b>'?", "options": ["Tá mé ag scríobh", "Tá mé ag dul", "Tá mé ag ól", "Tá mé ag léamh"], "correct": "Tá mé ag dul", "say": "Tá mé ag dul."}, {"badge": "Make it negative", "q": "Make it negative: '<b>Tá mé ag dul</b>'", "options": ["Nach bhfuil mé? ag dul", "Níl mé ag dul", "Tá mé ag léamh", "An bhfuil mé? ag dul"], "correct": "Níl mé ag dul"}, {"badge": "Build the sentence", "q": "How do you say '<b>I am singing</b>'?", "options": ["Tá mé ag canadh", "Tá mé ag scríobh", "Tá mé ag léamh", "Tá mé ag ól"], "correct": "Tá mé ag canadh", "say": "Tá mé ag canadh."}, {"badge": "Make it negative", "q": "Make it negative: '<b>Tá mé ag canadh</b>'", "options": ["Níl mé ag canadh", "Tá mé ag léamh", "An bhfuil mé? ag canadh", "Nach bhfuil mé? ag canadh"], "correct": "Níl mé ag canadh"}, {"badge": "Build the sentence", "q": "How do you say '<b>I am cooking</b>'?", "options": ["Tá mé ag scríobh", "Tá mé ag ól", "Tá mé ag cócaireacht", "Tá mé ag léamh"], "correct": "Tá mé ag cócaireacht", "say": "Tá mé ag cócaireacht."}, {"badge": "Make it negative", "q": "Make it negative: '<b>Tá mé ag cócaireacht</b>'", "options": ["Tá mé ag léamh", "Nach bhfuil mé? ag cócaireacht", "Níl mé ag cócaireacht", "An bhfuil mé? ag cócaireacht"], "correct": "Níl mé ag cócaireacht"}]};
+// =============================================================
+//  Irish Grammar - module app logic (ABAIR TTS)
+//  Expects LESSON (object) defined before this file:
+//    LESSON.kind, LESSON.study (HTML), LESSON.drill[], LESSON.fill[], LESSON.quiz[]
+// =============================================================
+const ROUND_LEN = 10;
+const KEY = 'ig-progress-' + LESSON.id;
+
+// ---------- ABAIR TTS ----------
+function say(text) {
+  if (!text) return;
+  const payload = {
+    synthinput: { text: text, ssml: 'string' },
+    voiceparams: { languageCode: 'ga-IE', name: 'ga_MU_cmg_piper', ssmlGender: 'UNSPECIFIED' },
+    audioconfig: { audioEncoding: 'LINEAR16', speakingRate: 1, volumeGainDb: 1, htsParams: 'string', sampleRateHertz: 0, effectsProfileId: [] },
+    outputType: 'JSON'
+  };
+  fetch('https://api.abair.ie/v3/synthesis', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+    .then(r => r.json())
+    .then(d => {
+      if (!d.audioContent) return;
+      const bytes = atob(d.audioContent);
+      const arr = new Uint8Array(bytes.length);
+      for (let i = 0; i < bytes.length; i++) arr[i] = bytes.charCodeAt(i);
+      const url = URL.createObjectURL(new Blob([arr], { type: 'audio/wav' }));
+      new Audio(url).play();
+    })
+    .catch(() => {});
+}
+window.say = say;
+
+function escHtml(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+function q(tag, attrs, html) {
+  const el = document.createElement(tag);
+  for (const k in attrs) el.setAttribute(k, attrs[k]);
+  if (html != null) el.innerHTML = html;
+  return el;
+}
+function shuffle(a) {
+  const arr = a.slice();
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+function bindSay(root) {
+  root.querySelectorAll('[data-say]').forEach(el => {
+    el.addEventListener('click', e => { e.stopPropagation(); say(el.dataset.say); });
+  });
+}
+function boxdisabled(sel) {
+  [...document.querySelectorAll(sel)].forEach(o => { o.disabled = true; });
+}
+
+// ---------- progress ----------
+function setProg(p) {
+  p = Math.max(0, Math.min(100, Math.round(p)));
+  localStorage.setItem(KEY, p);
+  const f = document.getElementById('progFill');
+  const t = document.getElementById('progPct');
+  if (f) f.style.width = p + '%';
+  if (t) t.textContent = p + '%';
+}
+function getProg() { return parseInt(localStorage.getItem(KEY) || '0', 10); }
+function resetProg() {
+  if (confirm('Reset progress for this lesson?')) { localStorage.removeItem(KEY); setProg(0); }
+}
+setProg(getProg());
+
+// ---------- tabs ----------
+document.querySelectorAll('.tabbtn').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.tabbtn').forEach(x => x.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(x => x.classList.remove('active'));
+  b.classList.add('active');
+  document.getElementById('panel-' + b.dataset.tab).classList.add('active');
+}));
+
+// ---------- study (prebuilt HTML) ----------
+(function () {
+  const host = document.getElementById('studyList');
+  host.innerHTML = LESSON.study;
+  bindSay(host);
+})();
+
+// =============================================================
+//  DRILL (flashcards)
+// =============================================================
+const DRILL = LESSON.drill;
+let drillOrder = shuffle([...DRILL.keys()]);
+let drillIdx = 0;
+function setDrill() {
+  const d = DRILL[drillOrder[drillIdx]];
+  const card = document.getElementById('flipcard');
+  card.classList.remove('flipped');
+  const fv = document.getElementById('drillVerb');
+  fv.textContent = d.front;
+  document.getElementById('drillEn').textContent = d.frontSub || '';
+  document.getElementById('drillPrompt').textContent = d.prompt || '';
+  document.getElementById('drillBack').innerHTML = d.back;
+  document.getElementById('drillPos').textContent = (drillIdx + 1) + ' / ' + DRILL.length;
+  document.getElementById('drillFill').style.width = ((drillIdx + 1) / DRILL.length * 100) + '%';
+  bindSay(document.getElementById('drillBack'));
+}
+function flip() { document.getElementById('flipcard').classList.toggle('flipped'); }
+function drillNext() {
+  if (drillIdx === DRILL.length - 1) { drillOrder = shuffle([...DRILL.keys()]); drillIdx = 0; }
+  else drillIdx++;
+  setDrill();
+  setProg(getProg() + Math.max(1, Math.round(100 / DRILL.length)));
+}
+function drillPrev() { if (drillIdx > 0) { drillIdx--; setDrill(); } }
+setDrill();
+
+// =============================================================
+//  FILL (choose the missing word)
+// =============================================================
+const FILL = LESSON.fill;
+let fillItems = [], fillIdx = 0, fillScore = 0, fillAnswered = 0;
+
+function genFill() {
+  fillItems = shuffle(FILL.slice()).slice(0, Math.min(ROUND_LEN, FILL.length));
+  fillIdx = 0; fillScore = 0; fillAnswered = 0;
+  fillShow();
+}
+function fillProgress() {
+  document.getElementById('fillPos').textContent = (fillIdx + 1) + ' / ' + fillItems.length;
+  document.getElementById('fillFill').style.width = ((fillIdx + 1) / fillItems.length * 100) + '%';
+  document.getElementById('fillScore').textContent = fillScore + ' / ' + fillAnswered + ' correct';
+}
+function fillShow() {
+  fillProgress();
+  const it = fillItems[fillIdx];
+  const box = q('div', { className: 'qcard' }, `
+    <p class="qtype">${it.qtype}</p>
+    <div class="q"><em>${it.sentence}</em>
+      <span class="speak inline" data-say="${escHtml(it.say)}">🔊 listen</span></div>
+    <div class="opts">${it.options.map(o => `<button class="opt" data-ok="${o === it.answer ? '1' : '0'}">${escHtml(o)}</button>`).join('')}</div>
+    <div id="fillFb"></div>`);
+  box.querySelectorAll('.opt').forEach(b => b.addEventListener('click', () => fillPick(b, it)));
+  bindSay(box);
+  const host = document.getElementById('fillQ');
+  host.innerHTML = '';
+  host.appendChild(box);
+}
+function fillPick(btn, it) {
+  if (btn.disabled) return;
+  boxdisabled('#fillQ .opt');
+  const ok = btn.dataset.ok === '1';
+  btn.classList.add(ok ? 'correct' : 'wrong');
+  fillAnswered++;
+  if (ok) fillScore++;
+  const fb = document.getElementById('fillFb');
+  fb.innerHTML = (ok ? '<div class="feedback ok">Correct! 🎉</div>'
+    : `<div class="feedback no">Not quite — the answer is <b>${escHtml(it.answer)}</b>.</div>`)
+    + `<div class="feedback sol">${it.english ? escHtml(it.english) + ' ' : ''}
+       <span class="speak" data-say="${escHtml(it.say)}">🔊</span></div>`;
+  bindSay(fb);
+  fillProgress();
+  setProg(getProg() + 1);
+  const wrap = q('div', { className: 'navbtns' },
+    fillIdx < fillItems.length - 1 ? '<button class="btn">Next →</button>' : '<button class="btn">See result 🏁</button>');
+  wrap.querySelector('button').addEventListener('click', () => {
+    if (fillIdx < fillItems.length - 1) { fillIdx++; fillShow(); } else fillResult();
+  });
+  fb.appendChild(wrap);
+}
+function fillResult() {
+  const host = document.getElementById('fillQ');
+  host.innerHTML = '';
+  const card = q('div', { className: 'qcard results' }, `
+    <h3>🏁 Round complete</h3>
+    <p class="bigscore">You got <b>${fillScore}</b> of <b>${fillItems.length}</b> right.</p>
+    <div class="navbtns">
+      <button class="btn" id="fillAgain">Play again</button>
+      <button class="btn ghost" onclick="document.querySelector('[data-tab=drill]').click()">Go to flashcards</button>
+    </div>`);
+  card.querySelector('#fillAgain').addEventListener('click', genFill);
+  host.appendChild(card);
+}
+function fillReset() { genFill(); }
+genFill();
+
+// =============================================================
+//  QUIZ
+// =============================================================
+const QUIZ = LESSON.quiz;
+let quizItems = [], quizIdx = 0, quizScore = 0, quizAnswered = 0;
+
+function genQuiz() {
+  quizItems = shuffle(QUIZ.slice()).slice(0, Math.min(ROUND_LEN, QUIZ.length));
+  quizIdx = 0; quizScore = 0; quizAnswered = 0;
+  quizShow();
+}
+function quizProgress() {
+  document.getElementById('quizPos').textContent = (quizIdx + 1) + ' / ' + quizItems.length;
+  document.getElementById('quizFill').style.width = ((quizIdx + 1) / quizItems.length * 100) + '%';
+  document.getElementById('quizScore').textContent = quizScore + ' / ' + quizAnswered + ' correct';
+}
+function quizShow() {
+  quizProgress();
+  const it = quizItems[quizIdx];
+  const box = q('div', { className: 'qcard' }, `
+    <p class="qtype"><span class="qtype-tag">${escHtml(it.badge)}</span></p>
+    <div class="q">${it.q}${it.say ? ` <span class="speak inline" data-say="${escHtml(it.say)}">🔊 listen</span>` : ''}</div>
+    <div class="opts">${it.options.map(o => `<button class="opt" data-ok="${o === it.correct ? '1' : '0'}">${escHtml(o)}</button>`).join('')}</div>
+    <div id="quizFb"></div>`);
+  box.querySelectorAll('.opt').forEach(b => b.addEventListener('click', () => quizPick(b, it)));
+  bindSay(box);
+  const host = document.getElementById('quizQ');
+  host.innerHTML = '';
+  host.appendChild(box);
+}
+function quizPick(btn, it) {
+  if (btn.disabled) return;
+  boxdisabled('#quizQ .opt');
+  const ok = btn.dataset.ok === '1';
+  btn.classList.add(ok ? 'correct' : 'wrong');
+  quizAnswered++;
+  if (ok) quizScore++;
+  const fb = document.getElementById('quizFb');
+  fb.innerHTML = (ok ? '<div class="feedback ok">Correct! 🎉</div>' : '<div class="feedback no">Not quite.</div>')
+    + `<div class="feedback sol">Answer: <b>${escHtml(it.correct)}</b></div>`;
+  quizProgress();
+  setProg(getProg() + 1);
+  const wrap = q('div', { className: 'navbtns' },
+    quizIdx < quizItems.length - 1 ? '<button class="btn">Next →</button>' : '<button class="btn">See result 🏁</button>');
+  wrap.querySelector('button').addEventListener('click', () => {
+    if (quizIdx < quizItems.length - 1) { quizIdx++; quizShow(); } else quizResult();
+  });
+  fb.appendChild(wrap);
+}
+function quizResult() {
+  const host = document.getElementById('quizQ');
+  host.innerHTML = '';
+  const card = q('div', { className: 'qcard results' }, `
+    <h3>🏁 Quiz complete</h3>
+    <p class="bigscore">You scored <b>${quizScore}</b> of <b>${quizItems.length}</b>.</p>
+    <div class="navbtns">
+      <button class="btn" id="quizAgain">Play again</button>
+      <button class="btn ghost" onclick="document.querySelector('[data-tab=drill]').click()">Go to flashcards</button>
+    </div>`);
+  card.querySelector('#quizAgain').addEventListener('click', genQuiz);
+  host.appendChild(card);
+}
+function quizReset() { genQuiz(); }
+genQuiz();
+
+</script>
+</body>
+</html>

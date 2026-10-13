@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Irish Grammar — Interactive Course</title>
+<style>* { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --green:#1a6b3c; --green-dark:#0d4a28; --gold:#d4af37; --cream:#faf8f0; --text:#1a1a1a; --grey:#6b6b6b; }
+body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; background:var(--cream); color:var(--text); line-height:1.6; }
+header { background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%); color:#fff; padding:2.4rem 1rem 2rem; text-align:center; position:relative; overflow:hidden; }
+header::after { content:''; position:absolute; bottom:-20px; left:0; right:0; height:40px; background:var(--cream); border-radius:50% 50% 0 0; }
+header h1 { font-size:clamp(1.6rem,3.4vw,2.4rem); margin-bottom:.4rem; }
+header p { opacity:.92; font-size:1.05rem; max-width:760px; margin:0 auto; }
+.container { max-width:1080px; margin:0 auto; padding:2rem 1.2rem; }
+.intro { background:#fff; border-radius:12px; padding:1.4rem 1.6rem; margin-bottom:1.8rem; box-shadow:0 2px 10px rgba(26,107,60,.08); border:1px solid #e8f0e4; }
+.intro h2 { color:var(--green); margin-bottom:.6rem; font-size:1.25rem; }
+.intro p { color:#333; }
+.intro a { color:var(--green); }
+.course-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(310px,1fr)); gap:1.4rem; margin-bottom:1.8rem; }
+.card { background:#fff; border-radius:12px; box-shadow:0 2px 10px rgba(26,107,60,.1); overflow:hidden; transition:transform .2s,box-shadow .2s; border-left:4px solid var(--green); display:flex; flex-direction:column; }
+.card:hover { transform:translateY(-3px); box-shadow:0 6px 18px rgba(26,107,60,.18); }
+.card-body { padding:1.4rem; flex:1; }
+.card .num { color:var(--gold); font-weight:700; font-size:.8rem; text-transform:uppercase; letter-spacing:1.2px; }
+.card h3 { color:var(--green); margin:.35rem 0; font-size:1.18rem; }
+.card .sub { color:var(--grey); font-size:.9rem; font-style:italic; }
+.card p { color:var(--grey); font-size:.93rem; margin-top:.4rem; }
+.card .meta { display:flex; gap:.9rem; font-size:.84rem; color:var(--grey); margin:.8rem 0; flex-wrap:wrap; align-items:center; }
+.card .bar { height:6px; background:#e7ede4; border-radius:4px; flex:1; min-width:90px; overflow:hidden; align-self:center; }
+.card .bar .fill { height:100%; background:linear-gradient(90deg,var(--green),#3aa866); transition:width .4s; }
+.card .btn { display:inline-block; margin-top:.7rem; background:var(--green); color:#fff; padding:.6rem 1.1rem; border-radius:6px; text-decoration:none; font-weight:600; font-size:.9rem; text-align:center; transition:background .2s; }
+.card .btn:hover { background:var(--green-dark); }
+.stats { display:flex; gap:1rem; flex-wrap:wrap; margin-top:.8rem; }
+.stat { background:#fff; border-radius:10px; padding:.8rem 1.2rem; box-shadow:0 2px 6px rgba(26,107,60,.08); border:1px solid #e8f0e4; font-size:.9rem; }
+.stat b { color:var(--green); font-size:1.25rem; }
+footer { text-align:center; padding:2rem 1rem; color:var(--grey); font-size:.9rem; }
+footer a { color:var(--green); }
+@media (max-width:600px){ header { padding:1.6rem 1rem; } .course-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>🍀 Irish Grammar</h1>
+  <p>Six interactive lessons on the tenses of Irish — continuous and simple — with conjugation tables, drills and ABAIR pronunciation.</p>
+</header>
+<div class="container">
+  <div class="intro">
+    <h2>Fáilte! · About this course</h2>
+    <p>An interactive companion to the YouTube playlist
+    <a href="https://www.youtube.com/playlist?list=PL_avneQKdWy0v0AxxYIEfjquNXIwvtO4k" target="_blank" rel="noopener"><strong>“Irish Grammar”</strong></a>
+    by <strong>Stories in Irish</strong>. The playlist covers the three continuous tenses
+    (present, past, future) and the three simple tenses (habitual present, future, past).
+    Each lesson turns the video into an active practice programme: rules and conjugation tables,
+    flashcards, fill-in-the-blanks and a quiz — with Irish audio from <strong>ABAIR</strong>.</p>
+    <p style="margin-top:.5rem">Click any green Irish word to hear it spoken. Your progress is saved automatically.</p>
+  </div>
+  <div class="course-grid">
+<div class="card">
+  <div class="card-body">
+    <div class="num">Lesson 1 · 25 verbal nouns</div>
+    <h3>🏃 An Aimsir Láithreach Leanúnach</h3>
+    <div class="sub">The Present Continuous</div>
+    <p>Describe what is happening right now with Tá … ag … .</p>
+    <div class="meta"><span>🔊 Audio</span><span>🃏 Cards</span><span>🎯 Quiz</span>
+      <div class="bar"><div class="fill" id="bar1" style="width:0%"></div></div>
+      <span id="pct1">0%</span>
+    </div>
+    <a class="btn" href="01-aimsir-laithreach-leanunach/index.html">Start lesson →</a>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <div class="num">Lesson 2 · 25 verbal nouns</div>
+    <h3>⏪ An Aimsir Chaite Leanúnach</h3>
+    <div class="sub">The Past Continuous</div>
+    <p>Say what was happening at a moment in the past with Bhí … ag … .</p>
+    <div class="meta"><span>🔊 Audio</span><span>🃏 Cards</span><span>🎯 Quiz</span>
+      <div class="bar"><div class="fill" id="bar2" style="width:0%"></div></div>
+      <span id="pct2">0%</span>
+    </div>
+    <a class="btn" href="02-aimsir-chaite-leanunach/index.html">Start lesson →</a>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <div class="num">Lesson 3 · 25 verbal nouns</div>
+    <h3>⏩ An Aimsir Fháistineach Leanúnach</h3>
+    <div class="sub">The Future Continuous</div>
+    <p>Say what will be happening at a future moment with Beidh … ag … .</p>
+    <div class="meta"><span>🔊 Audio</span><span>🃏 Cards</span><span>🎯 Quiz</span>
+      <div class="bar"><div class="fill" id="bar3" style="width:0%"></div></div>
+      <span id="pct3">0%</span>
+    </div>
+    <a class="btn" href="03-aimsir-fhaistineach-leanunach/index.html">Start lesson →</a>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <div class="num">Lesson 4 · 19 verbs</div>
+    <h3>🔁 An Aimsir Ghnáthláithreach</h3>
+    <div class="sub">The Present Habitual</div>
+    <p>Talk about habits, routines and general truths with the plain present tense.</p>
+    <div class="meta"><span>🔊 Audio</span><span>🃏 Cards</span><span>🎯 Quiz</span>
+      <div class="bar"><div class="fill" id="bar4" style="width:0%"></div></div>
+      <span id="pct4">0%</span>
+    </div>
+    <a class="btn" href="04-an-aimsir-ghnathlaithreach/index.html">Start lesson →</a>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <div class="num">Lesson 5 · 28 verbs</div>
+    <h3>🔮 An Aimsir Fháistineach</h3>
+    <div class="sub">The Future Tense</div>
+    <p>Talk about what will happen with the simple future tense.</p>
+    <div class="meta"><span>🔊 Audio</span><span>🃏 Cards</span><span>🎯 Quiz</span>
+      <div class="bar"><div class="fill" id="bar5" style="width:0%"></div></div>
+      <span id="pct5">0%</span>
+    </div>
+    <a class="btn" href="05-an-aimsir-fhaistineach/index.html">Start lesson →</a>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <div class="num">Lesson 6 · 28 verbs</div>
+    <h3>📜 An Aimsir Chaite</h3>
+    <div class="sub">The Past Tense</div>
+    <p>Talk about what happened with the simple past tense.</p>
+    <div class="meta"><span>🔊 Audio</span><span>🃏 Cards</span><span>🎯 Quiz</span>
+      <div class="bar"><div class="fill" id="bar6" style="width:0%"></div></div>
+      <span id="pct6">0%</span>
+    </div>
+    <a class="btn" href="06-an-aimsir-chaite/index.html">Start lesson →</a>
+  </div>
+</div></div>
+  <div class="stats">
+    <div class="stat"><b>6</b> lessons</div>
+    <div class="stat"><b>75</b> verb paradigms</div>
+    <div class="stat"><b>25</b> verbal nouns</div>
+    <div class="stat"><b>🔊</b> Irish audio (ABAIR)</div>
+  </div>
+  <div class="intro" style="margin-top:1.4rem">
+    <h2>🎥 About the channel</h2>
+    <p>Watch the videos first, then work through the lessons actively. Channel:
+    <a href="https://www.youtube.com/@storiesinirish7621" target="_blank" rel="noopener">Stories in Irish</a>.
+    Audio is synthesised by <a href="https://abair.ie" target="_blank" rel="noopener">ABAIR</a> (Trinity College Dublin).</p>
+  </div>
+</div>
+<footer>
+  <p>Based on the <a href="https://www.youtube.com/playlist?list=PL_avneQKdWy0v0AxxYIEfjquNXIwvtO4k" target="_blank">“Irish Grammar”</a> playlist by Stories in Irish</p>
+  <p>Irish audio by <a href="https://abair.ie" target="_blank">ABAIR</a> (Trinity College Dublin)</p>
+</footer>
+<script>
+const IDS = [1, 2, 3, 4, 5, 6];
+function fmt(){
+  IDS.forEach(id=>{
+    const p = parseInt(localStorage.getItem('ig-progress-'+id)||'0',10);
+    const b = document.getElementById('bar'+id), t = document.getElementById('pct'+id);
+    if (b) b.style.width = Math.round(p)+'%';
+    if (t) t.textContent = Math.round(p)+'%';
+  });
+}
+fmt();
+window.addEventListener('storage', fmt);
+</script>
+</body>
+</html>

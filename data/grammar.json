@@ -1,0 +1,459 @@
+{
+  "source": {
+    "playlistUrl": "https://www.youtube.com/playlist?list=PL_avneQKdWy0v0AxxYIEfjquNXIwvtO4k",
+    "playlistTitle": "Irish Grammar",
+    "channel": "Stories in Irish",
+    "channelUrl": "https://www.youtube.com/@storiesinirish7621"
+  },
+  "pronouns": ["mé", "tú", "sé", "sí", "muid", "sibh", "siad", "saor"],
+  "verbalNouns": [
+    { "vn": "léamh", "verb": "léigh", "meaning": "reading", "english": "to read" },
+    { "vn": "scríobh", "verb": "scríobh", "meaning": "writing", "english": "to write" },
+    { "vn": "ól", "verb": "ól", "meaning": "drinking", "english": "to drink" },
+    { "vn": "ithe", "verb": "ith", "meaning": "eating", "english": "to eat" },
+    { "vn": "rith", "verb": "rith", "meaning": "running", "english": "to run" },
+    { "vn": "caint", "verb": "labhair", "meaning": "talking", "english": "to talk" },
+    { "vn": "siúl", "verb": "siúil", "meaning": "walking", "english": "to walk" },
+    { "vn": "féachaint", "verb": "féach", "meaning": "watching / looking", "english": "to look" },
+    { "vn": "éisteacht", "verb": "éist", "meaning": "listening", "english": "to listen" },
+    { "vn": "ceannach", "verb": "ceannaigh", "meaning": "buying", "english": "to buy" },
+    { "vn": "déanamh", "verb": "déan", "meaning": "doing / making", "english": "to do / make" },
+    { "vn": "dul", "verb": "téigh", "meaning": "going", "english": "to go" },
+    { "vn": "teacht", "verb": "tar", "meaning": "coming", "english": "to come" },
+    { "vn": "fanacht", "verb": "fan", "meaning": "waiting / staying", "english": "to wait / stay" },
+    { "vn": "obair", "verb": "oibrigh", "meaning": "working", "english": "to work" },
+    { "vn": "codladh", "verb": "codail", "meaning": "sleeping", "english": "to sleep" },
+    { "vn": "glanadh", "verb": "glan", "meaning": "cleaning", "english": "to clean" },
+    { "vn": "ní", "verb": "nigh", "meaning": "washing", "english": "to wash" },
+    { "vn": "cócaireacht", "verb": "cócairigh", "meaning": "cooking", "english": "to cook" },
+    { "vn": "damhsa", "verb": "damhsaigh", "meaning": "dancing", "english": "to dance" },
+    { "vn": "canadh", "verb": "can", "meaning": "singing", "english": "to sing" },
+    { "vn": "foghlaim", "verb": "foghlaim", "meaning": "learning", "english": "to learn" },
+    { "vn": "imirt", "verb": "imir", "meaning": "playing", "english": "to play" },
+    { "vn": "snámh", "verb": "snámh", "meaning": "swimming", "english": "to swim" },
+    { "vn": "smaoineamh", "verb": "smaoinigh", "meaning": "thinking", "english": "to think" }
+  ],
+  "lessons": [
+    {
+      "id": 1,
+      "slug": "01-aimsir-laithreach-leanunach",
+      "emoji": "🏃",
+      "kind": "continuous",
+      "auxTense": "present",
+      "titleIrish": "An Aimsir Láithreach Leanúnach",
+      "titleEnglish": "The Present Continuous",
+      "videoId": "O6gXTZdea18",
+      "videoUrl": "https://www.youtube.com/watch?v=O6gXTZdea18",
+      "summary": "Describe what is happening right now with Tá … ag … .",
+      "pattern": "Tá + [duine] + ag + [ainm briathartha]",
+      "patternEnglish": "Tá + [person] + ag + [verbal noun]",
+      "signalWords": [
+        { "irish": "anois", "english": "now" },
+        { "irish": "faoi láthair", "english": "at present" },
+        { "irish": "i láthair na huaire", "english": "at the moment" },
+        { "irish": "ag an nóiméad seo", "english": "at this minute" }
+      ],
+      "uses": [
+        { "irish": "Tá mé ag léamh.", "english": "I am reading." },
+        { "irish": "Tá sí ag cócaireacht an dinnéir.", "english": "She is cooking the dinner." },
+        { "irish": "Tá siad ag féachaint ar an teilifís.", "english": "They are watching television." }
+      ],
+      "aux": {
+        "name": "Bí — An Aimsir Láithreach",
+        "english": "to be — present",
+        "pos": ["Tá mé / Táim", "Tá tú", "Tá sé", "Tá sí", "Tá muid / Táimid", "Tá sibh", "Tá siad", "Táthar"],
+        "neg": ["Níl mé / Nílim", "Níl tú", "Níl sé", "Níl sí", "Níl muid / Nílimid", "Níl sibh", "Níl siad", "Ní tháthar"],
+        "q": ["An bhfuil mé?", "An bhfuil tú?", "An bhfuil sé?", "An bhfuil sí?", "An bhfuil muid?", "An bhfuil sibh?", "An bhfuil siad?", "An bhfuiltear?"],
+        "negq": ["Nach bhfuil mé?", "Nach bhfuil tú?", "Nach bhfuil sé?", "Nach bhfuil sí?", "Nach bhfuil muid?", "Nach bhfuil sibh?", "Nach bhfuil siad?", "Nach bhfuiltear?"]
+      },
+      "notes": [
+        { "title": "Verb–noun order", "html": "The person comes straight after the form of <b>bí</b>, then <b>ag</b>, then the verbal noun. The verbal noun never changes for person: <i>Tá mé ag rith</i>, <i>Tá siad ag rith</i>." },
+        { "title": "ag before a vowel", "html": "In careful writing <b>ag</b> is kept before a vowel (<i>ag ól</i>, <i>ag ithe</i>, <i>ag éisteacht</i>), though you will hear it shortened to <i>a</i> in speech." },
+        { "title": "Negative & questions", "html": "Use the <b>bí</b> forms <i>Níl</i>, <i>An bhfuil?</i> and <i>Nach bhfuil?</i> — the <i>ag</i> + verbal noun part stays the same: <i>Níl mé ag léamh</i>." }
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "02-aimsir-chaite-leanunach",
+      "emoji": "⏪",
+      "kind": "continuous",
+      "auxTense": "past",
+      "titleIrish": "An Aimsir Chaite Leanúnach",
+      "titleEnglish": "The Past Continuous",
+      "videoId": "TCl3ZLNqoGU",
+      "videoUrl": "https://www.youtube.com/watch?v=TCl3ZLNqoGU",
+      "summary": "Say what was happening at a moment in the past with Bhí … ag … .",
+      "pattern": "Bhí + [duine] + ag + [ainm briathartha]",
+      "patternEnglish": "Bhí + [person] + ag + [verbal noun]",
+      "signalWords": [
+        { "irish": "ag an am sin", "english": "at that time" },
+        { "irish": "nuair a tháinig sé", "english": "when he came" },
+        { "irish": "aréir", "english": "last night" },
+        { "irish": "ag a trí a chlog", "english": "at three o'clock" }
+      ],
+      "uses": [
+        { "irish": "Bhí mé ag léamh nuair a tháinig sí.", "english": "I was reading when she came." },
+        { "irish": "Bhí sé ag cur báistí.", "english": "It was raining." },
+        { "irish": "Bhí siad ag caint ag an am sin.", "english": "They were talking at that time." }
+      ],
+      "aux": {
+        "name": "Bí — An Aimsir Chaite",
+        "english": "to be — past",
+        "pos": ["Bhí mé", "Bhí tú", "Bhí sé", "Bhí sí", "Bhí muid / Bhíomar", "Bhí sibh", "Bhí siad", "Bhíothas"],
+        "neg": ["Ní raibh mé", "Ní raibh tú", "Ní raibh sé", "Ní raibh sí", "Ní raibh muid / Ní rabhamar", "Ní raibh sibh", "Ní raibh siad", "Ní rabhthas"],
+        "q": ["An raibh mé?", "An raibh tú?", "An raibh sé?", "An raibh sí?", "An raibh muid?", "An raibh sibh?", "An raibh siad?", "An rabhthas?"],
+        "negq": ["Nach raibh mé?", "Nach raibh tú?", "Nach raibh sé?", "Nach raibh sí?", "Nach raibh muid?", "Nach raibh sibh?", "Nach raibh siad?", "Nach rabhthas?"]
+      },
+      "notes": [
+        { "title": "The past of bí", "html": "The past continuous is just the past tense of <b>bí</b> (<i>Bhí</i>) + <b>ag</b> + verbal noun. It describes an action in progress at a point in the past." },
+        { "title": "Ní raibh / An raibh", "html": "<b>Bí</b> is irregular in the past. The negative is <i>Ní raibh</i> and the question is <i>An raibh?</i> — not <i>*Ní bhí</i> or <i>*An bhí</i>." },
+        { "title": "Two actions", "html": "A common pattern pairs the continuous with a simple past event: <i>Bhí mé ag siúl nuair a chonaic mé é</i> — I was walking when I saw him." }
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "03-aimsir-fhaistineach-leanunach",
+      "emoji": "⏩",
+      "kind": "continuous",
+      "auxTense": "future",
+      "titleIrish": "An Aimsir Fháistineach Leanúnach",
+      "titleEnglish": "The Future Continuous",
+      "videoId": "kyshQ49m3Ts",
+      "videoUrl": "https://www.youtube.com/watch?v=kyshQ49m3Ts",
+      "summary": "Say what will be happening at a future moment with Beidh … ag … .",
+      "pattern": "Beidh + [duine] + ag + [ainm briathartha]",
+      "patternEnglish": "Beidh + [person] + ag + [verbal noun]",
+      "signalWords": [
+        { "irish": "amárach", "english": "tomorrow" },
+        { "irish": "an tseachtain seo chugainn", "english": "next week" },
+        { "irish": "ag a seacht a chlog", "english": "at seven o'clock" },
+        { "irish": "faoin am sin", "english": "by that time" }
+      ],
+      "uses": [
+        { "irish": "Beidh mé ag léamh amárach.", "english": "I will be reading tomorrow." },
+        { "irish": "Beidh siad ag obair an tseachtain seo chugainn.", "english": "They will be working next week." },
+        { "irish": "Beidh sé ag cur báistí.", "english": "It will be raining." }
+      ],
+      "aux": {
+        "name": "Bí — An Aimsir Fháistineach",
+        "english": "to be — future",
+        "pos": ["Beidh mé", "Beidh tú", "Beidh sé", "Beidh sí", "Beidh muid / Beimid", "Beidh sibh", "Beidh siad", "Beifear"],
+        "neg": ["Ní bheidh mé", "Ní bheidh tú", "Ní bheidh sé", "Ní bheidh sí", "Ní bheidh muid / Ní bheimid", "Ní bheidh sibh", "Ní bheidh siad", "Ní bheifear"],
+        "q": ["An mbeidh mé?", "An mbeidh tú?", "An mbeidh sé?", "An mbeidh sí?", "An mbeidh muid?", "An mbeidh sibh?", "An mbeidh siad?", "An mbeifear?"],
+        "negq": ["Nach mbeidh mé?", "Nach mbeidh tú?", "Nach mbeidh sé?", "Nach mbeidh sí?", "Nach mbeidh muid?", "Nach mbeidh sibh?", "Nach mbeidh siad?", "Nach mbeifear?"]
+      },
+      "notes": [
+        { "title": "The future of bí", "html": "The future continuous uses <b>Beidh</b> + <b>ag</b> + verbal noun. It describes something that will be in progress at a future time." },
+        { "title": "Ní bheidh / An mbeidh", "html": "The negative is <i>Ní bheidh</i>, the question <i>An mbeidh?</i> and the negative question <i>Nach mbeidh?</i>." },
+        { "title": "Same verbal noun", "html": "Only the form of <b>bí</b> changes between the three continuous tenses — the <i>ag</i> + verbal noun stays identical across present, past and future." }
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "04-an-aimsir-ghnathlaithreach",
+      "emoji": "🔁",
+      "kind": "simple",
+      "tense": "present",
+      "titleIrish": "An Aimsir Ghnáthláithreach",
+      "titleEnglish": "The Present Habitual",
+      "videoId": "8b5MIg7jX8Q",
+      "videoUrl": "https://www.youtube.com/watch?v=8b5MIg7jX8Q",
+      "summary": "Talk about habits, routines and general truths with the plain present tense.",
+      "signalWords": [
+        { "irish": "gach lá", "english": "every day" },
+        { "irish": "de ghnáth", "english": "usually" },
+        { "irish": "i gcónaí", "english": "always" },
+        { "irish": "go minic", "english": "often" },
+        { "irish": "uaireanta", "english": "sometimes" },
+        { "irish": "riamh", "english": "ever" }
+      ],
+      "uses": [
+        { "irish": "Ólaim caife gach maidin.", "english": "I drink coffee every morning." },
+        { "irish": "Ritheann sé ar scoil.", "english": "He runs to school." },
+        { "irish": "Bíonn an ghrian ag taitneamh.", "english": "The sun shines." }
+      ],
+      "notes": [
+        { "title": "Habit, not 'now'", "html": "This tense describes what happens <i>habitually</i>. For an action happening right now, use the continuous: <i>Tá mé ag ól</i> (I am drinking) vs <i>Ólaim</i> (I drink)." },
+        { "title": "Two conjugations", "html": "<b>An chéad réimniú</b> (one-syllable roots) take <i>-ann / -eann</i>; <b>an dara réimniú</b> (roots ending in a slender consonant) take <i>-íonn</i>." },
+        { "title": "Particles", "html": "Negative <b>Ní</b> + <i>séimhiú</i>, question <b>An</b> + <i>urú</i>, negative question <b>Nach</b> + <i>urú</i>: <i>Ní ólaim</i>, <i>An ólann tú?</i>" }
+      ],
+      "verbs": [
+        { "root": "dún", "conj": 1, "meaning": "close", "example": "Dúnann sé an doras gach oíche.", "en_example": "He closes the door every night." },
+        { "root": "ól", "conj": 1, "meaning": "drink", "example": "Ólann sí caife gach maidin.", "en_example": "She drinks coffee every morning." },
+        { "root": "bris", "conj": 1, "meaning": "break", "example": "Briseann an páiste an ghloine.", "en_example": "The child breaks the glass." },
+        { "root": "ith", "conj": 1, "meaning": "eat", "example": "Itheann muid arán.", "en_example": "We eat bread." },
+        { "root": "tóg", "conj": 1, "meaning": "take / lift", "example": "Tógann sí an leabhar.", "en_example": "She takes the book." },
+        { "root": "glan", "conj": 1, "meaning": "clean", "example": "Glanann sé an chistin.", "en_example": "He cleans the kitchen." },
+        { "root": "caith", "conj": 1, "meaning": "wear / throw / spend", "example": "Caitheann sé hata.", "en_example": "He wears a hat." },
+        { "root": "fág", "conj": 1, "meaning": "leave", "example": "Fágann sí an baile.", "en_example": "She leaves home." },
+        { "root": "rith", "conj": 1, "meaning": "run", "example": "Ritheann sé ar scoil.", "en_example": "He runs to school." },
+        { "root": "scríobh", "conj": 1, "meaning": "write", "example": "Scríobhann sé litir.", "en_example": "He writes a letter." },
+        { "root": "fan", "conj": 1, "meaning": "wait / stay", "example": "Fanann sé sa bhaile.", "en_example": "He stays at home." },
+        { "root": "ceannaigh", "conj": 2, "stem": "ceannaí", "meaning": "buy", "example": "Ceannaíonn sí bia.", "en_example": "She buys food." },
+        { "root": "tosaigh", "conj": 2, "stem": "tosaí", "meaning": "start", "example": "Tosaíonn an rang ar a naoi.", "en_example": "The class starts at nine." },
+        { "root": "oscail", "conj": 2, "stem": "osclaí", "meaning": "open", "example": "Osclaíonn sé an fhuinneog.", "en_example": "He opens the window." },
+        { "root": "inis", "conj": 2, "stem": "insí", "meaning": "tell", "example": "Insíonn sé scéal.", "en_example": "He tells a story." },
+        { "root": "codail", "conj": 2, "stem": "codlaí", "meaning": "sleep", "example": "Codlaíonn sé go maith.", "en_example": "He sleeps well." },
+        { "root": "freagair", "conj": 2, "stem": "freagraí", "meaning": "answer", "example": "Freagraíonn sí an cheist.", "en_example": "She answers the question." },
+        { "root": "imigh", "conj": 2, "stem": "imí", "meaning": "go away / leave", "example": "Imíonn sé ar maidin.", "en_example": "He leaves in the morning." }
+      ],
+      "irregulars": [
+        {
+          "root": "bí", "meaning": "be", "example": "Bíonn sé gnóthach.", "en_example": "He is (habitually) busy.",
+          "pos": ["bím", "bíonn tú", "bíonn sé", "bíonn sí", "bímid", "bíonn sibh", "bíonn siad", "bítear"],
+          "neg": ["ní bhím", "ní bhíonn tú", "ní bhíonn sé", "ní bhíonn sí", "ní bhímid", "ní bhíonn sibh", "ní bhíonn siad", "ní bhítear"],
+          "q": ["an mbím?", "an mbíonn tú?", "an mbíonn sé?", "an mbíonn sí?", "an mbímid?", "an mbíonn sibh?", "an mbíonn siad?", "an mbítear?"],
+          "negq": ["nach mbím?", "nach mbíonn tú?", "nach mbíonn sé?", "nach mbíonn sí?", "nach mbímid?", "nach mbíonn sibh?", "nach mbíonn siad?", "nach mbítear?"]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "05-an-aimsir-fhaistineach",
+      "emoji": "🔮",
+      "kind": "simple",
+      "tense": "future",
+      "titleIrish": "An Aimsir Fháistineach",
+      "titleEnglish": "The Future Tense",
+      "videoId": "p1uj1hF29AE",
+      "videoUrl": "https://www.youtube.com/watch?v=p1uj1hF29AE",
+      "summary": "Talk about what will happen with the simple future tense.",
+      "signalWords": [
+        { "irish": "amárach", "english": "tomorrow" },
+        { "irish": "an tseachtain seo chugainn", "english": "next week" },
+        { "irish": "ar ball", "english": "later on" },
+        { "irish": "i gceann tamaill", "english": "in a while" },
+        { "irish": "go luath", "english": "soon" }
+      ],
+      "uses": [
+        { "irish": "Dúnfaidh mé an doras.", "english": "I will close the door." },
+        { "irish": "Rachaidh sí abhaile amárach.", "english": "She will go home tomorrow." },
+        { "irish": "Déanfaidh muid ár ndícheall.", "english": "We will do our best." }
+      ],
+      "notes": [
+        { "title": "Endings", "html": "<b>An chéad réimniú</b>: <i>-faidh / -fidh</i> (<i>dúnfaidh</i>, <i>brisfidh</i>). <b>An dara réimniú</b>: <i>-óidh / -eoidh</i> (<i>ceannóidh</i>, <i>inseoidh</i>)." },
+        { "title": "Same particles as present", "html": "Negative <b>Ní</b> + <i>séimhiú</i>, question <b>An</b> + <i>urú</i>, negative question <b>Nach</b> + <i>urú</i>: <i>Ní dhúnfaidh</i>, <i>An ndúnfaidh?</i>" },
+        { "title": "Eleven irregulars", "html": "Learn the future stems of the eleven irregular verbs by heart — <i>beidh, déanfaidh, gheobhaidh, rachaidh, feicfidh, tiocfaidh, íosfaidh, cloisfidh, béarfaidh, tabharfaidh, déarfaidh</i>." }
+      ],
+      "verbs": [
+        { "root": "dún", "conj": 1, "meaning": "close", "example": "Dúnfaidh sé an doras.", "en_example": "He will close the door." },
+        { "root": "ól", "conj": 1, "meaning": "drink", "example": "Ólfaidh sí tae.", "en_example": "She will drink tea." },
+        { "root": "bris", "conj": 1, "meaning": "break", "example": "Brisfidh sé an ghloine.", "en_example": "He will break the glass." },
+        { "root": "tóg", "conj": 1, "meaning": "take / lift", "example": "Tógfaidh sí an leabhar.", "en_example": "She will take the book." },
+        { "root": "glan", "conj": 1, "meaning": "clean", "example": "Glanfaidh mé an chistin.", "en_example": "I will clean the kitchen." },
+        { "root": "caith", "conj": 1, "meaning": "wear / throw / spend", "example": "Caithfidh sé hata.", "en_example": "He will wear a hat." },
+        { "root": "fág", "conj": 1, "meaning": "leave", "example": "Fágfaidh sí an baile.", "en_example": "She will leave home." },
+        { "root": "rith", "conj": 1, "meaning": "run", "example": "Rithfidh sé abhaile.", "en_example": "He will run home." },
+        { "root": "scríobh", "conj": 1, "meaning": "write", "example": "Scríobhfaidh sé litir.", "en_example": "He will write a letter." },
+        { "root": "fan", "conj": 1, "meaning": "wait / stay", "example": "Fanfaidh sé sa bhaile.", "en_example": "He will stay at home." },
+        { "root": "ceannaigh", "conj": 2, "fut": "ceannóidh", "fut1p": "ceannóimid", "meaning": "buy", "example": "Ceannóidh sí bia.", "en_example": "She will buy food." },
+        { "root": "tosaigh", "conj": 2, "fut": "tosóidh", "fut1p": "tosóimid", "meaning": "start", "example": "Tosóidh an rang ar a naoi.", "en_example": "The class will start at nine." },
+        { "root": "oscail", "conj": 2, "fut": "osclóidh", "fut1p": "osclóimid", "meaning": "open", "example": "Osclóidh sé an fhuinneog.", "en_example": "He will open the window." },
+        { "root": "inis", "conj": 2, "fut": "inseoidh", "fut1p": "inseoimid", "meaning": "tell", "example": "Inseoidh sé scéal.", "en_example": "He will tell a story." },
+        { "root": "codail", "conj": 2, "fut": "codlóidh", "fut1p": "codlóimid", "meaning": "sleep", "example": "Codlóidh sé go maith.", "en_example": "He will sleep well." },
+        { "root": "freagair", "conj": 2, "fut": "freagróidh", "fut1p": "freagróimid", "meaning": "answer", "example": "Freagróidh sí an cheist.", "en_example": "She will answer the question." },
+        { "root": "imigh", "conj": 2, "fut": "imeoidh", "fut1p": "imeoimid", "meaning": "go away / leave", "example": "Imeoidh sé ar maidin.", "en_example": "He will leave in the morning." }
+      ],
+      "irregulars": [
+        {
+          "root": "bí", "meaning": "be", "example": "Beidh sé anseo amárach.", "en_example": "He will be here tomorrow.",
+          "pos": ["beidh mé", "beidh tú", "beidh sé", "beidh sí", "beimid", "beidh sibh", "beidh siad", "beifear"],
+          "neg": ["ní bheidh mé", "ní bheidh tú", "ní bheidh sé", "ní bheidh sí", "ní bheimid", "ní bheidh sibh", "ní bheidh siad", "ní bheifear"],
+          "q": ["an mbeidh mé?", "an mbeidh tú?", "an mbeidh sé?", "an mbeidh sí?", "an mbeimid?", "an mbeidh sibh?", "an mbeidh siad?", "an mbeifear?"],
+          "negq": ["nach mbeidh mé?", "nach mbeidh tú?", "nach mbeidh sé?", "nach mbeidh sí?", "nach mbeimid?", "nach mbeidh sibh?", "nach mbeidh siad?", "nach mbeifear?"]
+        },
+        {
+          "root": "déan", "meaning": "do / make", "example": "Déanfaidh sé a chuid oibre.", "en_example": "He will do his work.",
+          "pos": ["déanfaidh mé", "déanfaidh tú", "déanfaidh sé", "déanfaidh sí", "déanfaimid", "déanfaidh sibh", "déanfaidh siad", "déanfar"],
+          "neg": ["ní dhéanfaidh mé", "ní dhéanfaidh tú", "ní dhéanfaidh sé", "ní dhéanfaidh sí", "ní dhéanfaimid", "ní dhéanfaidh sibh", "ní dhéanfaidh siad", "ní dhéanfar"],
+          "q": ["an ndéanfaidh mé?", "an ndéanfaidh tú?", "an ndéanfaidh sé?", "an ndéanfaidh sí?", "an ndéanfaimid?", "an ndéanfaidh sibh?", "an ndéanfaidh siad?", "an ndéanfar?"],
+          "negq": ["nach ndéanfaidh mé?", "nach ndéanfaidh tú?", "nach ndéanfaidh sé?", "nach ndéanfaidh sí?", "nach ndéanfaimid?", "nach ndéanfaidh sibh?", "nach ndéanfaidh siad?", "nach ndéanfar?"]
+        },
+        {
+          "root": "faigh", "meaning": "get / find", "example": "Gheobhaidh sí bronntanas.", "en_example": "She will get a present.",
+          "pos": ["gheobhaidh mé", "gheobhaidh tú", "gheobhaidh sé", "gheobhaidh sí", "gheobhaimid", "gheobhaidh sibh", "gheobhaidh siad", "gheofar"],
+          "neg": ["ní bhfaighidh mé", "ní bhfaighidh tú", "ní bhfaighidh sé", "ní bhfaighidh sí", "ní bhfaighimid", "ní bhfaighidh sibh", "ní bhfaighidh siad", "ní bhfaighfear"],
+          "q": ["an bhfaighidh mé?", "an bhfaighidh tú?", "an bhfaighidh sé?", "an bhfaighidh sí?", "an bhfaighimid?", "an bhfaighidh sibh?", "an bhfaighidh siad?", "an bhfaighfear?"],
+          "negq": ["nach bhfaighidh mé?", "nach bhfaighidh tú?", "nach bhfaighidh sé?", "nach bhfaighidh sí?", "nach bhfaighimid?", "nach bhfaighidh sibh?", "nach bhfaighidh siad?", "nach bhfaighfear?"]
+        },
+        {
+          "root": "téigh", "meaning": "go", "example": "Rachaidh sí abhaile.", "en_example": "She will go home.",
+          "pos": ["rachaidh mé", "rachaidh tú", "rachaidh sé", "rachaidh sí", "rachaimid", "rachaidh sibh", "rachaidh siad", "rachar"],
+          "neg": ["ní rachaidh mé", "ní rachaidh tú", "ní rachaidh sé", "ní rachaidh sí", "ní rachaimid", "ní rachaidh sibh", "ní rachaidh siad", "ní rachar"],
+          "q": ["an rachaidh mé?", "an rachaidh tú?", "an rachaidh sé?", "an rachaidh sí?", "an rachaimid?", "an rachaidh sibh?", "an rachaidh siad?", "an rachar?"],
+          "negq": ["nach rachaidh mé?", "nach rachaidh tú?", "nach rachaidh sé?", "nach rachaidh sí?", "nach rachaimid?", "nach rachaidh sibh?", "nach rachaidh siad?", "nach rachar?"]
+        },
+        {
+          "root": "feic", "meaning": "see", "example": "Feicfidh mé thú.", "en_example": "I will see you.",
+          "pos": ["feicfidh mé", "feicfidh tú", "feicfidh sé", "feicfidh sí", "feicfimid", "feicfidh sibh", "feicfidh siad", "feicfear"],
+          "neg": ["ní fheicfidh mé", "ní fheicfidh tú", "ní fheicfidh sé", "ní fheicfidh sí", "ní fheicfimid", "ní fheicfidh sibh", "ní fheicfidh siad", "ní fheicfear"],
+          "q": ["an bhfeicfidh mé?", "an bhfeicfidh tú?", "an bhfeicfidh sé?", "an bhfeicfidh sí?", "an bhfeicfimid?", "an bhfeicfidh sibh?", "an bhfeicfidh siad?", "an bhfeicfear?"],
+          "negq": ["nach bhfeicfidh mé?", "nach bhfeicfidh tú?", "nach bhfeicfidh sé?", "nach bhfeicfidh sí?", "nach bhfeicfimid?", "nach bhfeicfidh sibh?", "nach bhfeicfidh siad?", "nach bhfeicfear?"]
+        },
+        {
+          "root": "tar", "meaning": "come", "example": "Tiocfaidh sé ar ais.", "en_example": "He will come back.",
+          "pos": ["tiocfaidh mé", "tiocfaidh tú", "tiocfaidh sé", "tiocfaidh sí", "tiocfaimid", "tiocfaidh sibh", "tiocfaidh siad", "tiocfar"],
+          "neg": ["ní thiocfaidh mé", "ní thiocfaidh tú", "ní thiocfaidh sé", "ní thiocfaidh sí", "ní thiocfaimid", "ní thiocfaidh sibh", "ní thiocfaidh siad", "ní thiocfar"],
+          "q": ["an dtiocfaidh mé?", "an dtiocfaidh tú?", "an dtiocfaidh sé?", "an dtiocfaidh sí?", "an dtiocfaimid?", "an dtiocfaidh sibh?", "an dtiocfaidh siad?", "an dtiocfar?"],
+          "negq": ["nach dtiocfaidh mé?", "nach dtiocfaidh tú?", "nach dtiocfaidh sé?", "nach dtiocfaidh sí?", "nach dtiocfaimid?", "nach dtiocfaidh sibh?", "nach dtiocfaidh siad?", "nach dtiocfar?"]
+        },
+        {
+          "root": "ith", "meaning": "eat", "example": "Íosfaidh sé a dhinnéar.", "en_example": "He will eat his dinner.",
+          "pos": ["íosfaidh mé", "íosfaidh tú", "íosfaidh sé", "íosfaidh sí", "íosfaimid", "íosfaidh sibh", "íosfaidh siad", "íosfar"],
+          "neg": ["ní íosfaidh mé", "ní íosfaidh tú", "ní íosfaidh sé", "ní íosfaidh sí", "ní íosfaimid", "ní íosfaidh sibh", "ní íosfaidh siad", "ní íosfar"],
+          "q": ["an n-íosfaidh mé?", "an n-íosfaidh tú?", "an n-íosfaidh sé?", "an n-íosfaidh sí?", "an n-íosfaimid?", "an n-íosfaidh sibh?", "an n-íosfaidh siad?", "an n-íosfar?"],
+          "negq": ["nach n-íosfaidh mé?", "nach n-íosfaidh tú?", "nach n-íosfaidh sé?", "nach n-íosfaidh sí?", "nach n-íosfaimid?", "nach n-íosfaidh sibh?", "nach n-íosfaidh siad?", "nach n-íosfar?"]
+        },
+        {
+          "root": "clois", "meaning": "hear", "example": "Cloisfidh sé an ceol.", "en_example": "He will hear the music.",
+          "pos": ["cloisfidh mé", "cloisfidh tú", "cloisfidh sé", "cloisfidh sí", "cloisfimid", "cloisfidh sibh", "cloisfidh siad", "cloisfear"],
+          "neg": ["ní chloisfidh mé", "ní chloisfidh tú", "ní chloisfidh sé", "ní chloisfidh sí", "ní chloisfimid", "ní chloisfidh sibh", "ní chloisfidh siad", "ní chloisfear"],
+          "q": ["an gcloisfidh mé?", "an gcloisfidh tú?", "an gcloisfidh sé?", "an gcloisfidh sí?", "an gcloisfimid?", "an gcloisfidh sibh?", "an gcloisfidh siad?", "an gcloisfear?"],
+          "negq": ["nach gcloisfidh mé?", "nach gcloisfidh tú?", "nach gcloisfidh sé?", "nach gcloisfidh sí?", "nach gcloisfimid?", "nach gcloisfidh sibh?", "nach gcloisfidh siad?", "nach gcloisfear?"]
+        },
+        {
+          "root": "beir", "meaning": "bear / catch", "example": "Béarfaidh sí greim air.", "en_example": "She will catch hold of it.",
+          "pos": ["béarfaidh mé", "béarfaidh tú", "béarfaidh sé", "béarfaidh sí", "béarfaimid", "béarfaidh sibh", "béarfaidh siad", "béarfar"],
+          "neg": ["ní bhéarfaidh mé", "ní bhéarfaidh tú", "ní bhéarfaidh sé", "ní bhéarfaidh sí", "ní bhéarfaimid", "ní bhéarfaidh sibh", "ní bhéarfaidh siad", "ní bhéarfar"],
+          "q": ["an mbéarfaidh mé?", "an mbéarfaidh tú?", "an mbéarfaidh sé?", "an mbéarfaidh sí?", "an mbéarfaimid?", "an mbéarfaidh sibh?", "an mbéarfaidh siad?", "an mbéarfar?"],
+          "negq": ["nach mbéarfaidh mé?", "nach mbéarfaidh tú?", "nach mbéarfaidh sé?", "nach mbéarfaidh sí?", "nach mbéarfaimid?", "nach mbéarfaidh sibh?", "nach mbéarfaidh siad?", "nach mbéarfar?"]
+        },
+        {
+          "root": "tabhair", "meaning": "give", "example": "Tabharfaidh sé airgead dom.", "en_example": "He will give me money.",
+          "pos": ["tabharfaidh mé", "tabharfaidh tú", "tabharfaidh sé", "tabharfaidh sí", "tabharfaimid", "tabharfaidh sibh", "tabharfaidh siad", "tabharfar"],
+          "neg": ["ní thabharfaidh mé", "ní thabharfaidh tú", "ní thabharfaidh sé", "ní thabharfaidh sí", "ní thabharfaimid", "ní thabharfaidh sibh", "ní thabharfaidh siad", "ní thabharfar"],
+          "q": ["an dtabharfaidh mé?", "an dtabharfaidh tú?", "an dtabharfaidh sé?", "an dtabharfaidh sí?", "an dtabharfaimid?", "an dtabharfaidh sibh?", "an dtabharfaidh siad?", "an dtabharfar?"],
+          "negq": ["nach dtabharfaidh mé?", "nach dtabharfaidh tú?", "nach dtabharfaidh sé?", "nach dtabharfaidh sí?", "nach dtabharfaimid?", "nach dtabharfaidh sibh?", "nach dtabharfaidh siad?", "nach dtabharfar?"]
+        },
+        {
+          "root": "abair", "meaning": "say", "example": "Déarfaidh sé an fhírinne.", "en_example": "He will tell the truth.",
+          "pos": ["déarfaidh mé", "déarfaidh tú", "déarfaidh sé", "déarfaidh sí", "déarfaimid", "déarfaidh sibh", "déarfaidh siad", "déarfar"],
+          "neg": ["ní dhéarfaidh mé", "ní dhéarfaidh tú", "ní dhéarfaidh sé", "ní dhéarfaidh sí", "ní dhéarfaimid", "ní dhéarfaidh sibh", "ní dhéarfaidh siad", "ní dhéarfar"],
+          "q": ["an ndéarfaidh mé?", "an ndéarfaidh tú?", "an ndéarfaidh sé?", "an ndéarfaidh sí?", "an ndéarfaimid?", "an ndéarfaidh sibh?", "an ndéarfaidh siad?", "an ndéarfar?"],
+          "negq": ["nach ndéarfaidh mé?", "nach ndéarfaidh tú?", "nach ndéarfaidh sé?", "nach ndéarfaidh sí?", "nach ndéarfaimid?", "nach ndéarfaidh sibh?", "nach ndéarfaidh siad?", "nach ndéarfar?"]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "06-an-aimsir-chaite",
+      "emoji": "📜",
+      "kind": "simple",
+      "tense": "past",
+      "titleIrish": "An Aimsir Chaite",
+      "titleEnglish": "The Past Tense",
+      "videoId": "oeCqDusYq_w",
+      "videoUrl": "https://www.youtube.com/watch?v=oeCqDusYq_w",
+      "summary": "Talk about what happened with the simple past tense.",
+      "signalWords": [
+        { "irish": "inné", "english": "yesterday" },
+        { "irish": "aréir", "english": "last night" },
+        { "irish": "an tseachtain seo caite", "english": "last week" },
+        { "irish": "fadó", "english": "long ago" },
+        { "irish": "arú inné", "english": "the day before yesterday" }
+      ],
+      "uses": [
+        { "irish": "Dhún mé an doras.", "english": "I closed the door." },
+        { "irish": "Chuaigh sí abhaile inné.", "english": "She went home yesterday." },
+        { "irish": "Rinne muid ár ndícheall.", "english": "We did our best." }
+      ],
+      "notes": [
+        { "title": "Séimhiú first", "html": "The regular past tense adds <b>séimhiú</b> (lenition) to the first consonant: <i>dún → dhún</i>. Verbs beginning with a vowel or <b>f</b> take <b>d'</b>: <i>ól → d'ól</i>, <i>fan → d'fhan</i> (but <i>fh</i> is silent)." },
+        { "title": "Past particles", "html": "Negative <b>Níor</b> + <i>séimhiú</i>, question <b>Ar</b> + <i>séimhiú</i>, negative question <b>Nár</b> + <i>séimhiú</i>: <i>Níor dhún mé</i>, <i>Ar dhún tú?</i>, <i>Nár dhún sé?</i>" },
+        { "title": "Five special irregulars", "html": "<i>bí, déan, faigh, téigh, feic</i> use <b>Ní / An / Nach</b> in the past: <i>Ní raibh</i>, <i>An ndeachaigh?</i>, <i>Nach bhfaca?</i>. The other irregulars use <i>Níor / Ar / Nár</i>." }
+      ],
+      "verbs": [
+        { "root": "dún", "conj": 1, "meaning": "close", "example": "Dhún sé an doras.", "en_example": "He closed the door." },
+        { "root": "ól", "conj": 1, "meaning": "drink", "example": "D'ól sí tae.", "en_example": "She drank tea." },
+        { "root": "bris", "conj": 1, "meaning": "break", "example": "Bhris sé an ghloine.", "en_example": "He broke the glass." },
+        { "root": "ith", "conj": 1, "meaning": "eat", "example": "D'ith sí a dinnéar.", "en_example": "She ate her dinner." },
+        { "root": "tóg", "conj": 1, "meaning": "take / lift", "example": "Thóg sí an leabhar.", "en_example": "She took the book." },
+        { "root": "glan", "conj": 1, "meaning": "clean", "example": "Ghlan sé an chistin.", "en_example": "He cleaned the kitchen." },
+        { "root": "caith", "conj": 1, "meaning": "wear / throw / spend", "example": "Chaith sé hata.", "en_example": "He wore a hat." },
+        { "root": "fág", "conj": 1, "meaning": "leave", "example": "D'fhág sí an baile.", "en_example": "She left home." },
+        { "root": "rith", "conj": 1, "meaning": "run", "example": "Rith sé abhaile.", "en_example": "He ran home." },
+        { "root": "scríobh", "conj": 1, "meaning": "write", "example": "Scríobh sé litir.", "en_example": "He wrote a letter." },
+        { "root": "fan", "conj": 1, "meaning": "wait / stay", "example": "D'fhan sé sa bhaile.", "en_example": "He stayed at home." },
+        { "root": "ceannaigh", "conj": 2, "stem": "ceannaí", "meaning": "buy", "example": "Cheannaigh sí bia.", "en_example": "She bought food." },
+        { "root": "tosaigh", "conj": 2, "stem": "tosaí", "meaning": "start", "example": "Thosaigh an rang ar a naoi.", "en_example": "The class started at nine." },
+        { "root": "oscail", "conj": 2, "stem": "osclaí", "meaning": "open", "example": "D'oscail sé an fhuinneog.", "en_example": "He opened the window." },
+        { "root": "inis", "conj": 2, "stem": "insí", "meaning": "tell", "example": "D'inis sé scéal.", "en_example": "He told a story." },
+        { "root": "codail", "conj": 2, "stem": "codlaí", "meaning": "sleep", "example": "Chodail sé go maith.", "en_example": "He slept well." },
+        { "root": "freagair", "conj": 2, "stem": "freagraí", "meaning": "answer", "example": "D'fhreagair sí an cheist.", "en_example": "She answered the question." },
+        { "root": "imigh", "conj": 2, "stem": "imí", "meaning": "go away / leave", "example": "D'imigh sé ar maidin.", "en_example": "He left in the morning." }
+      ],
+      "irregulars": [
+        {
+          "root": "bí", "meaning": "be", "example": "Bhí sé anseo inné.", "en_example": "He was here yesterday.",
+          "pos": ["bhí mé", "bhí tú", "bhí sé", "bhí sí", "bhíomar", "bhí sibh", "bhí siad", "bhíothas"],
+          "neg": ["ní raibh mé", "ní raibh tú", "ní raibh sé", "ní raibh sí", "ní rabhamar", "ní raibh sibh", "ní raibh siad", "ní rabhthas"],
+          "q": ["an raibh mé?", "an raibh tú?", "an raibh sé?", "an raibh sí?", "an rabhamar?", "an raibh sibh?", "an raibh siad?", "an rabhthas?"],
+          "negq": ["nach raibh mé?", "nach raibh tú?", "nach raibh sé?", "nach raibh sí?", "nach rabhamar?", "nach raibh sibh?", "nach raibh siad?", "nach rabhthas?"]
+        },
+        {
+          "root": "déan", "meaning": "do / make", "example": "Rinne sé a chuid oibre.", "en_example": "He did his work.",
+          "pos": ["rinne mé", "rinne tú", "rinne sé", "rinne sí", "rinneamar", "rinne sibh", "rinne siad", "rinneadh"],
+          "neg": ["ní dhearna mé", "ní dhearna tú", "ní dhearna sé", "ní dhearna sí", "ní dhearnamar", "ní dhearna sibh", "ní dhearna siad", "ní dhearnadh"],
+          "q": ["an ndearna mé?", "an ndearna tú?", "an ndearna sé?", "an ndearna sí?", "an ndearnamar?", "an ndearna sibh?", "an ndearna siad?", "an ndearnadh?"],
+          "negq": ["nach ndearna mé?", "nach ndearna tú?", "nach ndearna sé?", "nach ndearna sí?", "nach ndearnamar?", "nach ndearna sibh?", "nach ndearna siad?", "nach ndearnadh?"]
+        },
+        {
+          "root": "faigh", "meaning": "get / find", "example": "Fuair sí bronntanas.", "en_example": "She got a present.",
+          "pos": ["fuair mé", "fuair tú", "fuair sé", "fuair sí", "fuaireamar", "fuair sibh", "fuair siad", "fuarthas"],
+          "neg": ["ní bhfuair mé", "ní bhfuair tú", "ní bhfuair sé", "ní bhfuair sí", "ní bhfuaireamar", "ní bhfuair sibh", "ní bhfuair siad", "ní bhfarthas"],
+          "q": ["an bhfuair mé?", "an bhfuair tú?", "an bhfuair sé?", "an bhfuair sí?", "an bhfuaireamar?", "an bhfuair sibh?", "an bhfuair siad?", "an bhfarthas?"],
+          "negq": ["nach bhfuair mé?", "nach bhfuair tú?", "nach bhfuair sé?", "nach bhfuair sí?", "nach bhfuaireamar?", "nach bhfuair sibh?", "nach bhfuair siad?", "nach bhfarthas?"]
+        },
+        {
+          "root": "téigh", "meaning": "go", "example": "Chuaigh sí abhaile.", "en_example": "She went home.",
+          "pos": ["chuaigh mé", "chuaigh tú", "chuaigh sé", "chuaigh sí", "chuamar", "chuaigh sibh", "chuaigh siad", "chuathas"],
+          "neg": ["ní dheachaigh mé", "ní dheachaigh tú", "ní dheachaigh sé", "ní dheachaigh sí", "ní dheachamar", "ní dheachaigh sibh", "ní dheachaigh siad", "ní dheachthas"],
+          "q": ["an ndeachaigh mé?", "an ndeachaigh tú?", "an ndeachaigh sé?", "an ndeachaigh sí?", "an ndeachamar?", "an ndeachaigh sibh?", "an ndeachaigh siad?", "an ndeachthas?"],
+          "negq": ["nach ndeachaigh mé?", "nach ndeachaigh tú?", "nach ndeachaigh sé?", "nach ndeachaigh sí?", "nach ndeachamar?", "nach ndeachaigh sibh?", "nach ndeachaigh siad?", "nach ndeachthas?"]
+        },
+        {
+          "root": "feic", "meaning": "see", "example": "Chonaic mé thú.", "en_example": "I saw you.",
+          "pos": ["chonaic mé", "chonaic tú", "chonaic sé", "chonaic sí", "chonaiceamar", "chonaic sibh", "chonaic siad", "chonacthas"],
+          "neg": ["ní fhaca mé", "ní fhaca tú", "ní fhaca sé", "ní fhaca sí", "ní fhacamar", "ní fhaca sibh", "ní fhaca siad", "ní fhacthas"],
+          "q": ["an bhfaca mé?", "an bhfaca tú?", "an bhfaca sé?", "an bhfaca sí?", "an bhfacamar?", "an bhfaca sibh?", "an bhfaca siad?", "an bhfacthas?"],
+          "negq": ["nach bhfaca mé?", "nach bhfaca tú?", "nach bhfaca sé?", "nach bhfaca sí?", "nach bhfacamar?", "nach bhfaca sibh?", "nach bhfaca siad?", "nach bhfacthas?"]
+        },
+        {
+          "root": "tar", "meaning": "come", "example": "Tháinig sé ar ais.", "en_example": "He came back.",
+          "pos": ["tháinig mé", "tháinig tú", "tháinig sé", "tháinig sí", "thángamar", "tháinig sibh", "tháinig siad", "thángthas"],
+          "neg": ["níor tháinig mé", "níor tháinig tú", "níor tháinig sé", "níor tháinig sí", "níor thángamar", "níor tháinig sibh", "níor tháinig siad", "níor thángthas"],
+          "q": ["ar tháinig mé?", "ar tháinig tú?", "ar tháinig sé?", "ar tháinig sí?", "ar thángamar?", "ar tháinig sibh?", "ar tháinig siad?", "ar thángthas?"],
+          "negq": ["nár tháinig mé?", "nár tháinig tú?", "nár tháinig sé?", "nár tháinig sí?", "nár thángamar?", "nár tháinig sibh?", "nár tháinig siad?", "nár thángthas?"]
+        },
+        {
+          "root": "clois", "meaning": "hear", "example": "Chuala sé an ceol.", "en_example": "He heard the music.",
+          "pos": ["chuala mé", "chuala tú", "chuala sé", "chuala sí", "chualamar", "chuala sibh", "chuala siad", "cualas"],
+          "neg": ["níor chuala mé", "níor chuala tú", "níor chuala sé", "níor chuala sí", "níor chualamar", "níor chuala sibh", "níor chuala siad", "níor cualas"],
+          "q": ["ar chuala mé?", "ar chuala tú?", "ar chuala sé?", "ar chuala sí?", "ar chualamar?", "ar chuala sibh?", "ar chuala siad?", "ar cualas?"],
+          "negq": ["nár chuala mé?", "nár chuala tú?", "nár chuala sé?", "nár chuala sí?", "nár chualamar?", "nár chuala sibh?", "nár chuala siad?", "nár cualas?"]
+        },
+        {
+          "root": "beir", "meaning": "bear / catch", "example": "Rug sí ar an liathróid.", "en_example": "She caught the ball.",
+          "pos": ["rug mé", "rug tú", "rug sé", "rug sí", "rugamar", "rug sibh", "rug siad", "rugadh"],
+          "neg": ["níor rug mé", "níor rug tú", "níor rug sé", "níor rug sí", "níor rugamar", "níor rug sibh", "níor rug siad", "níor rugadh"],
+          "q": ["ar rug mé?", "ar rug tú?", "ar rug sé?", "ar rug sí?", "ar rugamar?", "ar rug sibh?", "ar rug siad?", "ar rugadh?"],
+          "negq": ["nár rug mé?", "nár rug tú?", "nár rug sé?", "nár rug sí?", "nár rugamar?", "nár rug sibh?", "nár rug siad?", "nár rugadh?"]
+        },
+        {
+          "root": "tabhair", "meaning": "give", "example": "Thug sé airgead dom.", "en_example": "He gave me money.",
+          "pos": ["thug mé", "thug tú", "thug sé", "thug sí", "thugamar", "thug sibh", "thug siad", "tugadh"],
+          "neg": ["níor thug mé", "níor thug tú", "níor thug sé", "níor thug sí", "níor thugamar", "níor thug sibh", "níor thug siad", "níor tugadh"],
+          "q": ["ar thug mé?", "ar thug tú?", "ar thug sé?", "ar thug sí?", "ar thugamar?", "ar thug sibh?", "ar thug siad?", "ar tugadh?"],
+          "negq": ["nár thug mé?", "nár thug tú?", "nár thug sé?", "nár thug sí?", "nár thugamar?", "nár thug sibh?", "nár thug siad?", "nár tugadh?"]
+        },
+        {
+          "root": "abair", "meaning": "say", "example": "Dúirt sé an fhírinne.", "en_example": "He told the truth.",
+          "pos": ["dúirt mé", "dúirt tú", "dúirt sé", "dúirt sí", "dúramar", "dúirt sibh", "dúirt siad", "dúradh"],
+          "neg": ["níor dúirt mé", "níor dúirt tú", "níor dúirt sé", "níor dúirt sí", "níor dúramar", "níor dúirt sibh", "níor dúirt siad", "níor dúradh"],
+          "q": ["ar dúirt mé?", "ar dúirt tú?", "ar dúirt sé?", "ar dúirt sí?", "ar dúramar?", "ar dúirt sibh?", "ar dúirt siad?", "ar dúradh?"],
+          "negq": ["nár dúirt mé?", "nár dúirt tú?", "nár dúirt sé?", "nár dúirt sí?", "nár dúramar?", "nár dúirt sibh?", "nár dúirt siad?", "nár dúradh?"]
+        }
+      ]
+    }
+  ]
+}
